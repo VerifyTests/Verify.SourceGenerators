@@ -10,9 +10,9 @@ namespace VerifyTests
         {
             VerifierSettings.ModifySerialization(settings =>
             {
-                settings.AddExtraSettings(serializerSettings =>
+                settings.AddExtraSettings(serializer =>
                 {
-                    serializerSettings.Converters.Add(new LocalizableStringConverter());
+                    serializer.Converters.Add(new LocalizableStringConverter());
                 });
             });
             VerifierSettings.RegisterFileConverter<GeneratorDriver>(Convert);
