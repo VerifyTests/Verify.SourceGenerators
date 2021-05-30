@@ -1,6 +1,6 @@
 # <img src="/src/icon.png" height="30px"> Verify.AngleSharp
 
-[![Build status](https://ci.appveyor.com/api/projects/status/ff4ms9mevndkui7l?svg=true)](https://ci.appveyor.com/project/SimonCropp/Verify-SourceGenerators)
+[![Build status](https://ci.appveyor.com/api/projects/status/2ip7do6jk0gevt0v?svg=true)](https://ci.appveyor.com/project/SimonCropp/Verify-SourceGenerators)
 [![NuGet Status](https://img.shields.io/nuget/v/Verify.SourceGenerators.svg)](https://www.nuget.org/packages/Verify.SourceGenerators/)
 
 Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of C# Source Generators.
