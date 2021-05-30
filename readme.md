@@ -110,7 +110,12 @@ public class SampleTest
 
 ## Results
 
-And wil result in the following verified files:
+And will result in the following verified files:
+
+
+### Info file
+
+An info file containing all metadata about the current state. Eg and Diagnostics or Exceptions.
 
 <!-- snippet: SampleTest.Run.00.verified.txt -->
 <a id='snippet-SampleTest.Run.00.verified.txt'></a>
@@ -131,6 +136,11 @@ And wil result in the following verified files:
 ```
 <sup><a href='/src/Tests/SampleTest.Run.00.verified.txt#L1-L13' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleTest.Run.00.verified.txt' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
+
+
+### Source FIles
+
+Multiple source files. One for each `GeneratorDriverRunResult.Results.GeneratedSources`.
 
 <!-- snippet: SampleTest.Run.01.verified.cs -->
 <a id='snippet-SampleTest.Run.01.verified.cs'></a>
