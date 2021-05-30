@@ -26,8 +26,12 @@ public static class HelloWorld
             category: "the category",
             DiagnosticSeverity.Info,
             isEnabledByDefault: true);
-        var location = Location.Create("theFile", new TextSpan(1, 2), new LinePositionSpan(new LinePosition(1, 2), new LinePosition(3, 4)));
-        LocalizableString? localizableString = descriptor.MessageFormat;
+        var location = Location.Create(
+            "theFile",
+            new TextSpan(1, 2),
+            new LinePositionSpan(
+                new LinePosition(1, 2),
+                new LinePosition(3, 4)));
         var diagnostic = Diagnostic.Create(descriptor, location);
         context.ReportDiagnostic(diagnostic);
     }

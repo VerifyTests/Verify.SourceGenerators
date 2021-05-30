@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Microsoft.CodeAnalysis;
 
 namespace VerifyTests
@@ -7,28 +8,45 @@ namespace VerifyTests
     {
         public static void Enable()
         {
-            VerifierSettings.ModifySerialization(settings => settings.AddExtraSettings(serializerSettings => serializerSettings.Converters.Add(new LocalizableStringConverter())));
+            VerifierSettings.ModifySerialization(settings =>
+            {
+                settings.AddExtraSettings(serializerSettings =>
+                {
+                    serializerSettings.Converters.Add(new LocalizableStringConverter());
+                });
+            });
             VerifierSettings.RegisterFileConverter<GeneratorDriver>(Convert);
             VerifierSettings.RegisterFileConverter<GeneratorDriverRunResult>(Convert);
         }
 
-        private static ConversionResult Convert(GeneratorDriverRunResult target, IReadOnlyDictionary<string, object> context)
+        static ConversionResult Convert(GeneratorDriverRunResult target, IReadOnlyDictionary<string, object> context)
         {
-            var list = new List<Target>();
+            var exceptions = new List<Exception>();
+            var targets = new List<Target>();
             foreach (var result in target.Results)
             {
+                if (result.Exception != null)
+                {
+                    exceptions.Add(result.Exception);
+                }
+
                 foreach (var source in result.GeneratedSources)
                 {
-                    list.Add(new Target("cs", source.SourceText.ToString()));
+                    targets.Add(new Target("cs", source.SourceText.ToString()));
                 }
             }
 
-            return new ConversionResult(new {target.Diagnostics}, list);
+            var info = new
+            {
+                target.Diagnostics,
+                Exceptions = exceptions
+            };
+            return new ConversionResult(info, targets);
         }
 
-        private static ConversionResult Convert(GeneratorDriver target, IReadOnlyDictionary<string, object> context)
+        static ConversionResult Convert(GeneratorDriver target, IReadOnlyDictionary<string, object> context)
         {
-            throw new System.NotImplementedException();
+            return Convert(target.GetRunResult(), context);
         }
     }
 }
