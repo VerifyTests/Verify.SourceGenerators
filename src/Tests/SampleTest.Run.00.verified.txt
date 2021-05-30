@@ -1,0 +1,13 @@
+﻿{
+  Diagnostics: [
+    {
+      Id: theId,
+      Title: the title,
+      Severity: Info,
+      WarningLevel: 1,
+      Location: ExternalFile(theFile@2:3),
+      MessageFormat: the descriptor,
+      Category: the category
+    }
+  ]
+}

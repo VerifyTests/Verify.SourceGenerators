@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.CodeAnalysis;
 
 namespace VerifyTests
@@ -14,8 +15,10 @@ namespace VerifyTests
                 {
                     var converters = serializer.Converters;
                     converters.Add(new LocalizableStringConverter());
+                    converters.Add(new DiagnosticConverter());
                     converters.Add(new LocationConverter());
                     converters.Add(new GeneratedSourceResultConverter());
+                    converters.Add(new DiagnosticDescriptorConverter());
                     converters.Add(new SourceTextConverter());
                 });
             });
@@ -34,11 +37,7 @@ namespace VerifyTests
                     exceptions.Add(result.Exception);
                 }
 
-                foreach (var source in result.GeneratedSources)
-                {
-                    var data = $@"//HintName: {source.HintName}{source.SourceText}";
-                    targets.Add(new Target("cs", data));
-                }
+                targets.AddRange(result.GeneratedSources.Select(SourceToTarget));
             }
 
             var info = new
@@ -47,6 +46,12 @@ namespace VerifyTests
                 Exceptions = exceptions
             };
             return new ConversionResult(info, targets);
+        }
+
+        static Target SourceToTarget(GeneratedSourceResult source)
+        {
+            var data = $@"//HintName: {source.HintName}{source.SourceText}";
+            return new Target("cs", data);
         }
 
         static ConversionResult Convert(GeneratorDriver target, IReadOnlyDictionary<string, object> context)

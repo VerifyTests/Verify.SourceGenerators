@@ -8,8 +8,8 @@ public class HelloWorldGenerator :
 {
     public void Execute(GeneratorExecutionContext context)
     {
-        var source = @"
-using System;
+        var source = @"using System;
+
 public static class HelloWorld
 {
     public static void SayHello()
@@ -26,6 +26,7 @@ public static class HelloWorld
             category: "the category",
             DiagnosticSeverity.Info,
             isEnabledByDefault: true);
+
         var location = Location.Create(
             "theFile",
             new TextSpan(1, 2),

@@ -12,9 +12,11 @@ class GeneratedSourceResultConverter :
         JsonSerializer serializer,
         IReadOnlyDictionary<string, object> context)
     {
+        writer.WriteStartObject();
         writer.WritePropertyName("HintName");
         writer.WriteValue(value.HintName);
         writer.WritePropertyName("Source");
         writer.WriteValue(value.ToString());
+        writer.WriteEndObject();
     }
 }

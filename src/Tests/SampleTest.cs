@@ -7,21 +7,21 @@ using VerifyXunit;
 using Xunit;
 
 [UsesVerify]
-public class Samples
+public class SampleTest
 {
     [Fact]
-    public Task SimpleGeneratorTest()
+    public Task Run()
     {
-        var inputCompilation = CreateCompilation();
+        var compilation = CreateCompilation();
         HelloWorldGenerator generator = new();
 
         GeneratorDriver driver = CSharpGeneratorDriver.Create(generator);
 
-        driver = driver.RunGeneratorsAndUpdateCompilation(inputCompilation, out _, out _);
+        driver = driver.RunGeneratorsAndUpdateCompilation(compilation, out _, out _);
 
-        var runResult = driver.GetRunResult();
+        var result = driver.GetRunResult();
 
-        return Verifier.Verify(runResult);
+        return Verifier.Verify(result);
     }
 
     static Compilation CreateCompilation()
