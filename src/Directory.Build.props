@@ -2,10 +2,9 @@
 <Project>
   <PropertyGroup>
     <NoWarn>CS1591;CS0649</NoWarn>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <AssemblyVersion>1.0.0</AssemblyVersion>
-    <PackageTags>AngleSharp, Verify</PackageTags>
-    <Description>Extends Verify (https://github.com/VerifyTests/Verify) with Html verification utilities via AngleSharp (https://github.com/AngleSharp/AngleSharp).</Description>
-    <SignAssembly>false</SignAssembly>
+    <PackageTags>Source Generator, Verify</PackageTags>
+    <Description>Extends Verify (https://github.com/VerifyTests/Verify)  to allow verification of C# Source Generators.</Description>
   </PropertyGroup>
 </Project>
