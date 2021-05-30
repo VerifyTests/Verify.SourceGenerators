@@ -15,14 +15,7 @@
       Id: theId,
       Severity: Info,
       WarningLevel: 1,
-      Location: {
-        SourceSpan: {
-          Start: 1,
-          Length: 2
-        },
-        FilePath: theFile,
-        Kind: ExternalFile
-      },
+      Location: ExternalFile(theFile@2:3),
       DefaultSeverity: Info
     }
   ]

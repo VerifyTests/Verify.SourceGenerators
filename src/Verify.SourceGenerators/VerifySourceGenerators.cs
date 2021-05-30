@@ -14,6 +14,8 @@ namespace VerifyTests
                 {
                     var converters = serializer.Converters;
                     converters.Add(new LocalizableStringConverter());
+                    converters.Add(new LocationConverter());
+                    converters.Add(new GeneratedSourceResultConverter());
                     converters.Add(new SourceTextConverter());
                 });
             });
@@ -34,7 +36,8 @@ namespace VerifyTests
 
                 foreach (var source in result.GeneratedSources)
                 {
-                    targets.Add(new Target("cs", source.SourceText.ToString()));
+                    var data = $@"//HintName: {source.HintName}{source.SourceText}";
+                    targets.Add(new Target("cs", data));
                 }
             }
 

@@ -10,9 +10,14 @@ using Xunit;
 public class Tests
 {
     [Fact]
-    public Task LocalizableStringConverter()
+    public Task LocationConverter()
     {
-        return Verifier.Verify(new LocalizableStringImp());
+        return Verifier.Verify(Location.Create(
+            "theFile",
+            new TextSpan(1, 2),
+            new LinePositionSpan(
+                new LinePosition(1, 2),
+                new LinePosition(3, 4))));
     }
 
     [Fact]
@@ -21,7 +26,14 @@ public class Tests
         return Verifier.Verify(SourceText.From("theSource", Encoding.UTF8));
     }
 
-    class LocalizableStringImp : LocalizableString
+    [Fact]
+    public Task LocalizableStringConverter()
+    {
+        return Verifier.Verify(new LocalizableStringImp());
+    }
+
+    class LocalizableStringImp :
+        LocalizableString
     {
         protected override string GetText(IFormatProvider? formatProvider)
         {
