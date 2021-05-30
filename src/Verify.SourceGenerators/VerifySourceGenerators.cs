@@ -7,6 +7,7 @@ namespace VerifyTests
     {
         public static void Enable()
         {
+            VerifierSettings.ModifySerialization(settings => settings.AddExtraSettings(serializerSettings => serializerSettings.Converters.Add(new LocalizableStringConverter())));
             VerifierSettings.RegisterFileConverter<GeneratorDriver>(Convert);
             VerifierSettings.RegisterFileConverter<GeneratorDriverRunResult>(Convert);
         }
