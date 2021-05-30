@@ -1,4 +1,4 @@
-# <img src="/src/icon.png" height="30px"> Verify.AngleSharp
+# <img src="/src/icon.png" height="30px"> Verify.SourceGenerators
 
 [![Build status](https://ci.appveyor.com/api/projects/status/2ip7do6jk0gevt0v?svg=true)](https://ci.appveyor.com/project/SimonCropp/Verify-SourceGenerators)
 [![NuGet Status](https://img.shields.io/nuget/v/Verify.SourceGenerators.svg)](https://www.nuget.org/packages/Verify.SourceGenerators/)
@@ -20,6 +20,8 @@ Call `VerifySourceGenerators.Enable()` once at assembly load time.
 
 
 ## Generator
+
+Given a Source Generator:
 
 <!-- snippet: HelloWorldGenerator.cs -->
 <a id='snippet-HelloWorldGenerator.cs'></a>
@@ -74,6 +76,8 @@ public static class HelloWorld
 
 ## Test
 
+Can be tested as follows:
+
 <!-- snippet: SampleTest.cs -->
 <a id='snippet-SampleTest.cs'></a>
 ```cs
@@ -119,6 +123,8 @@ public class SampleTest
 
 ## Results
 
+And wil result in the following verified files:
+
 <!-- snippet: SampleTest.Run.00.verified.txt -->
 <a id='snippet-SampleTest.Run.00.verified.txt'></a>
 ```txt
@@ -160,3 +166,8 @@ public static class HelloWorld
 ## Notes:
 
  * [Source Generators Cookbook / Testing](https://github.com/dotnet/roslyn/blob/main/docs/features/source-generators.cookbook.md#unit-testing-of-generators)
+
+
+## Icon
+
+[Sauce](https://thenounproject.com/term/sauce/952995/) designed by [April Hsuan](https://thenounproject.com/AprilHsuan/) from [The Noun Project](https://thenounproject.com/).
