@@ -20,13 +20,10 @@ public class Samples
     public Task SimpleGeneratorTest()
     {
         var inputCompilation = CreateCompilation(@"
-namespace MyCode
+public class Program
 {
-    public class Program
+    public static void Main(string[] args)
     {
-        public static void Main(string[] args)
-        {
-        }
     }
 }
 ");
