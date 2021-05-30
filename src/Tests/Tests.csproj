@@ -11,9 +11,8 @@
     <PackageReference Include="Verify.Xunit" Version="11.18.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.10.0" />
-    <ProjectReference Include="..\SampleGenerator\SampleGenerator.csproj"
-                      OutputItemType="Analyzer"/>
-    <ProjectReference Include="..\Verify.SourceGenerators\Verify.SourceGenerators.csproj"/>
+    <ProjectReference Include="..\SampleGenerator\SampleGenerator.csproj" OutputItemType="Analyzer" />
+    <ProjectReference Include="..\Verify.SourceGenerators\Verify.SourceGenerators.csproj" />
     <PackageReference Include="ProjectDefaults" Version="1.0.54" PrivateAssets="All" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.9.0" PrivateAssets="all" />
     <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.2" PrivateAssets="all" />

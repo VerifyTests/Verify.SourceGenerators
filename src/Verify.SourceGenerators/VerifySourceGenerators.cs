@@ -12,7 +12,9 @@ namespace VerifyTests
             {
                 settings.AddExtraSettings(serializer =>
                 {
-                    serializer.Converters.Add(new LocalizableStringConverter());
+                    var converters = serializer.Converters;
+                    converters.Add(new LocalizableStringConverter());
+                    converters.Add(new SourceTextConverter());
                 });
             });
             VerifierSettings.RegisterFileConverter<GeneratorDriver>(Convert);
