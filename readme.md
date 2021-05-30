@@ -125,27 +125,18 @@ public class SampleTest
 {
   Diagnostics: [
     {
-      Descriptor: {
-        Id: theId,
-        Title: the title,
-        Description: ,
-        HelpLinkUri: ,
-        MessageFormat: the descriptor,
-        Category: the category,
-        DefaultSeverity: Info,
-        IsEnabledByDefault: true,
-        CustomTags: []
-      },
       Id: theId,
+      Title: the title,
       Severity: Info,
       WarningLevel: 1,
       Location: ExternalFile(theFile@2:3),
-      DefaultSeverity: Info
+      MessageFormat: the descriptor,
+      Category: the category
     }
   ]
 }
 ```
-<sup><a href='/src/Tests/SampleTest.Run.00.verified.txt#L1-L22' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleTest.Run.00.verified.txt' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/SampleTest.Run.00.verified.txt#L1-L13' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleTest.Run.00.verified.txt' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 <!-- snippet: SampleTest.Run.01.verified.cs -->
