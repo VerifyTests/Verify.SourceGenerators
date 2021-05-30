@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ItemGroup>
+    <Compile Remove="**/*.verified.cs" />
+    <Compile Remove="**/*.received.cs" />
+    <None Include="**/*.verified.cs" />
+    <None Include="**/*.received.cs" />
+  </ItemGroup>
+</Project>

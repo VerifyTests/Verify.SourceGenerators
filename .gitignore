@@ -1,18 +1,14 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
+# Build results
 [Bb]in/
+[Oo]bj/
 
-# Other files and folders
-.settings/
+# Visual Studio cache directory
+.vs/
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+nugets/
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# ReSharper is a .NET coding add-in
+*.DotSettings.user
+
+# Approval Tests
+*.received.*

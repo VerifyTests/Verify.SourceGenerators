@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <NoWarn>CS1591;CS0649</NoWarn>
+    <Version>2.6.0</Version>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <PackageTags>AngleSharp, Verify</PackageTags>
+    <Description>Extends Verify (https://github.com/VerifyTests/Verify) with Html verification utilities via AngleSharp (https://github.com/AngleSharp/AngleSharp).</Description>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+</Project>
