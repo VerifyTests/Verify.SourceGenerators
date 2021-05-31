@@ -114,7 +114,7 @@ And will result in the following verified files:
 
 ### Info file
 
-An info file containing all metadata about the current state. eg any Diagnostics or Exceptions.
+An info file containing all metadata about the current state. eg any Diagnostics.
 
 <!-- snippet: SampleTest.Run.00.verified.txt -->
 <a id='snippet-SampleTest.Run.00.verified.txt'></a>
