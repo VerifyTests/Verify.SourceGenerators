@@ -36,8 +36,7 @@ public class HelloWorldGenerator :
 {
     public void Execute(GeneratorExecutionContext context)
     {
-        var source = @"
-using System;
+        var source = @"using System;
 public static class HelloWorld
 {
     public static void SayHello()
@@ -70,7 +69,7 @@ public static class HelloWorld
     }
 }
 ```
-<sup><a href='/src/SampleGenerator/HelloWorldGenerator.cs#L1-L43' title='Snippet source file'>snippet source</a> | <a href='#snippet-HelloWorldGenerator.cs' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/SampleGenerator/HelloWorldGenerator.cs#L1-L42' title='Snippet source file'>snippet source</a> | <a href='#snippet-HelloWorldGenerator.cs' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
