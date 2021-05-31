@@ -7,9 +7,7 @@ public static class ModuleInitializer
     public static void Init()
     {
         #region Initialize
-
         VerifySourceGenerators.Enable();
-
         #endregion
     }
 }

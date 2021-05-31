@@ -1,0 +1,13 @@
+﻿{
+  Diagnostics: [
+    {
+      Id: theId,
+      Title: the title,
+      Severity: Error,
+      WarningLevel: 0,
+      Location: None,
+      MessageFormat: the descriptor,
+      Category: the category
+    }
+  ]
+}

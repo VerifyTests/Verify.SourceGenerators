@@ -40,10 +40,19 @@ namespace VerifyTests
                 targets.AddRange(result.GeneratedSources.Select(SourceToTarget));
             }
 
+            if (exceptions.Count == 1)
+            {
+                throw exceptions.First();
+            }
+
+            if (exceptions.Count > 1)
+            {
+                throw new AggregateException(exceptions);
+            }
+
             var info = new
             {
-                target.Diagnostics,
-                Exceptions = exceptions
+                target.Diagnostics
             };
             return new ConversionResult(info, targets);
         }
@@ -51,7 +60,7 @@ namespace VerifyTests
         static Target SourceToTarget(GeneratedSourceResult source)
         {
             var data = $@"//HintName: {source.HintName}{source.SourceText}";
-            return new Target("cs", data);
+            return new Target("txt", data);
         }
 
         static ConversionResult Convert(GeneratorDriver target, IReadOnlyDictionary<string, object> context)
