@@ -50,11 +50,16 @@ namespace VerifyTests
                 throw new AggregateException(exceptions);
             }
 
-            var info = new
+            if (target.Diagnostics.Any())
             {
-                target.Diagnostics
-            };
-            return new ConversionResult(info, targets);
+                var info = new
+                {
+                    target.Diagnostics
+                };
+                return new ConversionResult(info, targets);
+            }
+
+            return new ConversionResult(null, targets);
         }
 
         static Target SourceToTarget(GeneratedSourceResult source)
