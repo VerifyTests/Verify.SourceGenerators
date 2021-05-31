@@ -154,6 +154,7 @@ public static class HelloWorld
     }
 }
 ```
+<sup><a href='/src/Tests/SampleTest.Run.01.verified.txt#L1-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleTest.Run.01.verified.txt' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
