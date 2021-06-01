@@ -126,7 +126,7 @@ An info file containing all metadata about the current state. eg any Diagnostics
       Title: the title,
       Severity: Info,
       WarningLevel: 1,
-      Location: ExternalFile(theFile@2:3),
+      Location: theFile: (1,2)-(3,4),
       MessageFormat: the descriptor,
       Category: the category
     }
