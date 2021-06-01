@@ -12,6 +12,6 @@ class LocationConverter :
         JsonSerializer serializer,
         IReadOnlyDictionary<string, object> context)
     {
-        writer.WriteValue(value.ToString());
+        writer.WriteValue(value.GetMappedLineSpan().ToString());
     }
 }
