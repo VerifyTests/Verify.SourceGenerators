@@ -23,7 +23,7 @@ class DiagnosticConverter :
         writer.WritePropertyName("WarningLevel");
         writer.WriteValue(value.WarningLevel);
         writer.WritePropertyName("Location");
-        writer.WriteValue(value.Location.ToString());
+        writer.WriteValue(value.Location.GetMappedLineSpan().ToString());
 
         var description = value.Descriptor.Description.ToString();
         if (!string.IsNullOrWhiteSpace(description) )
