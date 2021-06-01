@@ -1,9 +1,5 @@
-﻿using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.Text;
-using System;
-using System.Collections.Generic;
+﻿using Microsoft.CodeAnalysis.Text;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 using Microsoft.CodeAnalysis.CSharp;
@@ -18,7 +14,7 @@ public class SyntaxLocationTests
     {
         var sourceText =
 @"class Foo {
-void Bar() { } 
+void Bar() { }
 }
 ";
 
