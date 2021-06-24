@@ -13,6 +13,7 @@ Part of the <a href='https://dotnetfoundation.org' alt=''>.NET Foundation</a>
 
 https://nuget.org/packages/Verify.SourceGenerators/
 
+Install one of the Verify [testing framework adapters](https://github.com/verifytests/verify#nuget-packages) NuGet packages.
 
 ## Initialize
 
@@ -76,6 +77,8 @@ public static class HelloWorld
 ## Test
 
 Can be tested as follows:
+
+This snippets assumes use of the XUnit Verify adapter, change the `using VerifyXUnit` if using other testing frameworks.
 
 <!-- snippet: SampleTest.cs -->
 <a id='snippet-SampleTest.cs'></a>
