@@ -13,6 +13,7 @@ Part of the <a href='https://dotnetfoundation.org' alt=''>.NET Foundation</a>
 
 https://nuget.org/packages/Verify.SourceGenerators/
 
+Install one of the Verify [testing framework adapters](https://github.com/verifytests/verify#nuget-packages) NuGet packages.
 
 ## Initialize
 
