@@ -78,6 +78,8 @@ public static class HelloWorld
 
 Can be tested as follows:
 
+This assumes that you are using the XUnit Verify adapter, change the `using VerifyXUnit` if using other testing frameworks.
+
 <!-- snippet: SampleTest.cs -->
 <a id='snippet-SampleTest.cs'></a>
 ```cs
