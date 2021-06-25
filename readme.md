@@ -34,7 +34,6 @@ public static class ModuleInitializer
 
 ```
 
-
 ## Generator
 
 Given a Source Generator:
