@@ -19,6 +19,21 @@ Install one of the Verify [testing framework adapters](https://github.com/verify
 
 Call `VerifySourceGenerators.Enable()` once at assembly load time.
 
+```cs
+using System.Runtime.CompilerServices;
+using VerifyTests;
+
+public static class ModuleInitializer
+{
+    [ModuleInitializer]
+    public static void Init()
+    {
+        VerifySourceGenerators.Enable();
+    }
+}
+
+```
+
 
 ## Generator
 
