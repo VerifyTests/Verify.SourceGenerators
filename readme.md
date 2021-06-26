@@ -31,7 +31,6 @@ public static class ModuleInitializer
         VerifySourceGenerators.Enable();
     }
 }
-
 ```
 
 ## Generator
