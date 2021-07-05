@@ -12,3 +12,4 @@ nugets/
 
 # Approval Tests
 *.received.*
+*.user
