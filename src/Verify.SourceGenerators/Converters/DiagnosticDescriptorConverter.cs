@@ -20,13 +20,13 @@ class DiagnosticDescriptorConverter :
         writer.WriteValue(value.Title.ToString());
 
         var description = value.Description.ToString();
-        if (!string.IsNullOrWhiteSpace(description) )
+        if (!string.IsNullOrWhiteSpace(description))
         {
             writer.WritePropertyName("Description");
             writer.WriteValue(description);
         }
 
-        if (!string.IsNullOrWhiteSpace(value.HelpLinkUri) )
+        if (!string.IsNullOrWhiteSpace(value.HelpLinkUri))
         {
             writer.WritePropertyName("HelpLin");
             writer.WriteValue(value.HelpLinkUri);
@@ -49,6 +49,7 @@ class DiagnosticDescriptorConverter :
             writer.WritePropertyName("CustomTags");
             writer.WriteValue(value.CustomTags);
         }
+
         writer.WriteEndObject();
     }
 }

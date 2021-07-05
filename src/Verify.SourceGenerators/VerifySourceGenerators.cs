@@ -56,16 +56,16 @@ namespace VerifyTests
                 {
                     target.Diagnostics
                 };
-                return new ConversionResult(info, targets);
+                return new(info, targets);
             }
 
-            return new ConversionResult(null, targets);
+            return new(null, targets);
         }
 
         static Target SourceToTarget(GeneratedSourceResult source)
         {
             var data = $@"//HintName: {source.HintName}{source.SourceText}";
-            return new Target("txt", data);
+            return new("txt", data);
         }
 
         static ConversionResult Convert(GeneratorDriver target, IReadOnlyDictionary<string, object> context)

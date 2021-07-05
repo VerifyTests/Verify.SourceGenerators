@@ -26,13 +26,13 @@ class DiagnosticConverter :
         writer.WriteValue(value.Location.GetMappedLineSpan().ToString());
 
         var description = value.Descriptor.Description.ToString();
-        if (!string.IsNullOrWhiteSpace(description) )
+        if (!string.IsNullOrWhiteSpace(description))
         {
             writer.WritePropertyName("Description");
             writer.WriteValue(description);
         }
 
-        if (!string.IsNullOrWhiteSpace(value.Descriptor.HelpLinkUri) )
+        if (!string.IsNullOrWhiteSpace(value.Descriptor.HelpLinkUri))
         {
             writer.WritePropertyName("HelpLin");
             writer.WriteValue(value.Descriptor.HelpLinkUri);
@@ -49,6 +49,7 @@ class DiagnosticConverter :
             writer.WritePropertyName("CustomTags");
             writer.WriteValue(value.Descriptor.CustomTags);
         }
+
         writer.WriteEndObject();
     }
 }
