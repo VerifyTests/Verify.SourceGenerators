@@ -157,9 +157,9 @@ An info file containing all metadata about the current state. eg any Diagnostics
 
 Multiple source files. One for each `GeneratorDriverRunResult.Results.GeneratedSources`.
 
-<!-- snippet: SampleTest.Run.01.verified.txt -->
-<a id='snippet-SampleTest.Run.01.verified.txt'></a>
-```txt
+<!-- snippet: SampleTest.Run.01.verified.cs -->
+<a id='snippet-SampleTest.Run.01.verified.cs'></a>
+```cs
 //HintName: helloWorldGenerator.cs
 using System;
 public static class HelloWorld
@@ -170,7 +170,7 @@ public static class HelloWorld
     }
 }
 ```
-<sup><a href='/src/Tests/SampleTest.Run.01.verified.txt#L1-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleTest.Run.01.verified.txt' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/SampleTest.Run.01.verified.cs#L1-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleTest.Run.01.verified.cs' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 

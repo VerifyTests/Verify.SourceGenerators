@@ -65,7 +65,7 @@ namespace VerifyTests
         static Target SourceToTarget(GeneratedSourceResult source)
         {
             var data = $@"//HintName: {source.HintName}{source.SourceText}";
-            return new("txt", data);
+            return new("cs", data);
         }
 
         static ConversionResult Convert(GeneratorDriver target, IReadOnlyDictionary<string, object> context)

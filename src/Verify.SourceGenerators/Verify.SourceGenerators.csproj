@@ -9,5 +9,6 @@
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.10.0" PrivateAssets="all" />
     <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.2" PrivateAssets="all" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" Condition="$(Configuration) == 'Release'" />
+    <Content Include="build\Verify.SourceGenerators.targets" PackagePath="build\Verify.SourceGenerators.targets" />
   </ItemGroup>
 </Project>
