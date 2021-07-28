@@ -21,7 +21,7 @@ public static class HelloWorld
         var descriptor = new DiagnosticDescriptor(
             id: "theId",
             title: "the title",
-            messageFormat: "the descriptor",
+            messageFormat: "the message from {0}",
             category: "the category",
             DiagnosticSeverity.Info,
             isEnabledByDefault: true);
@@ -32,7 +32,7 @@ public static class HelloWorld
             new LinePositionSpan(
                 new LinePosition(1, 2),
                 new LinePosition(3, 4)));
-        var diagnostic = Diagnostic.Create(descriptor, location);
+        var diagnostic = Diagnostic.Create(descriptor, location, "hello world generator");
         context.ReportDiagnostic(diagnostic);
     }
 

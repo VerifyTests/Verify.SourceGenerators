@@ -6,7 +6,8 @@
       Severity: Info,
       WarningLevel: 1,
       Location: theFile: (1,2)-(3,4),
-      MessageFormat: the descriptor,
+      MessageFormat: the message from {0},
+      Message: the message from hello world generator,
       Category: the category
     }
   ]
