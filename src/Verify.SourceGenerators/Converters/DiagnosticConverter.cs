@@ -40,6 +40,9 @@ class DiagnosticConverter :
 
         writer.WritePropertyName("MessageFormat");
         writer.WriteValue(value.Descriptor.MessageFormat.ToString());
+        
+        writer.WritePropertyName("Message");
+        writer.WriteValue(value.GetMessage());
 
         writer.WritePropertyName("Category");
         writer.WriteValue(value.Descriptor.Category);
