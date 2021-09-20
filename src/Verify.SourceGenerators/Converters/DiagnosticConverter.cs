@@ -34,7 +34,7 @@ class DiagnosticConverter :
 
         if (!string.IsNullOrWhiteSpace(value.Descriptor.HelpLinkUri))
         {
-            writer.WritePropertyName("HelpLin");
+            writer.WritePropertyName("HelpLink");
             writer.WriteValue(value.Descriptor.HelpLinkUri);
         }
 
