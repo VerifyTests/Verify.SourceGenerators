@@ -1,6 +1,4 @@
 ﻿using Microsoft.CodeAnalysis.Text;
-using System.Linq;
-using System.Threading.Tasks;
 using Xunit;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
