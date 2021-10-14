@@ -40,7 +40,6 @@ Given a Source Generator:
 <!-- snippet: HelloWorldGenerator.cs -->
 <a id='snippet-HelloWorldGenerator.cs'></a>
 ```cs
-using System.Text;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Text;
 
@@ -83,7 +82,7 @@ public static class HelloWorld
     }
 }
 ```
-<sup><a href='/src/SampleGenerator/HelloWorldGenerator.cs#L1-L42' title='Snippet source file'>snippet source</a> | <a href='#snippet-HelloWorldGenerator.cs' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/SampleGenerator/HelloWorldGenerator.cs#L1-L41' title='Snippet source file'>snippet source</a> | <a href='#snippet-HelloWorldGenerator.cs' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -96,7 +95,6 @@ This snippets assumes use of the XUnit Verify adapter, change the `using VerifyX
 <!-- snippet: SampleTest.cs -->
 <a id='snippet-SampleTest.cs'></a>
 ```cs
-using System.Threading.Tasks;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using VerifyXunit;
@@ -119,7 +117,7 @@ public class SampleTest
     }
 }
 ```
-<sup><a href='/src/Tests/SampleTest.cs#L1-L22' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleTest.cs' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/SampleTest.cs#L1-L21' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleTest.cs' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
