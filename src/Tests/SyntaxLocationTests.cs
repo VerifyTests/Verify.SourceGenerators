@@ -20,6 +20,6 @@ void Bar() { }
         var syntaxTree = SyntaxFactory.ParseSyntaxTree(source);
 
         var methodDeclarationSyntax = syntaxTree.GetRoot().DescendantNodes().OfType<MethodDeclarationSyntax>().Single();
-        return Verifier.Verify(methodDeclarationSyntax.GetLocation());
+        return Verify(methodDeclarationSyntax.GetLocation());
     }
 }

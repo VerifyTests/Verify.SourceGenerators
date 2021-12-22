@@ -9,7 +9,7 @@ public class Tests
     [Fact]
     public Task LocationConverter()
     {
-        return Verifier.Verify(Location.Create(
+        return Verify(Location.Create(
             "theFile",
             new TextSpan(1, 2),
             new LinePositionSpan(
@@ -20,13 +20,13 @@ public class Tests
     [Fact]
     public Task SourceTextConverter()
     {
-        return Verifier.Verify(SourceText.From("theSource", Encoding.UTF8));
+        return Verify(SourceText.From("theSource", Encoding.UTF8));
     }
 
     [Fact]
     public Task LocalizableStringConverter()
     {
-        return Verifier.Verify(new LocalizableStringImp());
+        return Verify(new LocalizableStringImp());
     }
 
     class LocalizableStringImp :
