@@ -113,7 +113,7 @@ public class SampleTest
 
         driver = driver.RunGenerators(compilation);
 
-        return Verifier.Verify(driver);
+        return Verify(driver);
     }
 }
 ```
