@@ -97,8 +97,6 @@ This snippets assumes use of the XUnit Verify adapter, change the `using VerifyX
 ```cs
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
-using VerifyXunit;
-using Xunit;
 
 [UsesVerify]
 public class SampleTest
@@ -117,7 +115,7 @@ public class SampleTest
     }
 }
 ```
-<sup><a href='/src/Tests/SampleTest.cs#L1-L21' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleTest.cs' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/SampleTest.cs#L1-L19' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleTest.cs' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
