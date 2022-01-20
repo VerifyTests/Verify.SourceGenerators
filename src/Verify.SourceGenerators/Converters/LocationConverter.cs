@@ -1,15 +1,10 @@
 ﻿using Microsoft.CodeAnalysis;
 using Newtonsoft.Json;
-using VerifyTests;
 
 class LocationConverter :
     WriteOnlyJsonConverter<Location>
 {
-    public override void WriteJson(
-        JsonWriter writer,
-        Location value,
-        JsonSerializer serializer,
-        IReadOnlyDictionary<string, object> context)
+    public override void Write(VerifyJsonWriter writer, Location value, JsonSerializer serializer)
     {
         writer.WriteValue(value.GetMappedLineSpan().ToString());
     }

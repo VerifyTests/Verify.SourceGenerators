@@ -1,8 +1,6 @@
 ﻿using Microsoft.CodeAnalysis.Text;
-using Xunit;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using VerifyXunit;
 
 [UsesVerify]
 public class SyntaxLocationTests

@@ -1,7 +1,5 @@
 ﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Text;
-using VerifyXunit;
-using Xunit;
 
 [UsesVerify]
 public class Tests

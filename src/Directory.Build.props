@@ -2,7 +2,7 @@
 <Project>
   <PropertyGroup>
     <NoWarn>CS1591;CS0649</NoWarn>
-    <Version>1.2.0</Version>
+    <Version>1.3.0-beta.1</Version>
     <AssemblyVersion>1.0.0</AssemblyVersion>
     <PackageTags>Source Generator, Verify</PackageTags>
     <Description>Extends Verify (https://github.com/VerifyTests/Verify) to allow verification of C# Source Generators.</Description>

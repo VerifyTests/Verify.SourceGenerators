@@ -1,17 +1,11 @@
 ﻿using Microsoft.CodeAnalysis;
 using Newtonsoft.Json;
-using VerifyTests;
 
 class DiagnosticDescriptorConverter :
     WriteOnlyJsonConverter<DiagnosticDescriptor>
 {
-    public override void WriteJson(
-        JsonWriter writer,
-        DiagnosticDescriptor value,
-        JsonSerializer serializer,
-        IReadOnlyDictionary<string, object> context)
+    public override void Write(VerifyJsonWriter writer, DiagnosticDescriptor value, JsonSerializer serializer)
     {
-        writer.WriteStartObject();
         writer.WritePropertyName("Id");
         writer.WriteValue(value.Id);
         writer.WritePropertyName("Title");

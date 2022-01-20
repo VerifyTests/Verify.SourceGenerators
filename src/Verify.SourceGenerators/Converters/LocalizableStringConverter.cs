@@ -1,15 +1,10 @@
 ﻿using Microsoft.CodeAnalysis;
 using Newtonsoft.Json;
-using VerifyTests;
 
 class LocalizableStringConverter :
     WriteOnlyJsonConverter<LocalizableString>
 {
-    public override void WriteJson(
-        JsonWriter writer,
-        LocalizableString value,
-        JsonSerializer serializer,
-        IReadOnlyDictionary<string, object> context)
+    public override void Write(VerifyJsonWriter writer, LocalizableString value, JsonSerializer serializer)
     {
         writer.WriteValue(value.ToString());
     }

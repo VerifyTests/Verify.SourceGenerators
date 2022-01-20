@@ -1,7 +1,5 @@
 ﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
-using VerifyXunit;
-using Xunit;
 
 [UsesVerify]
 public class SampleTest
