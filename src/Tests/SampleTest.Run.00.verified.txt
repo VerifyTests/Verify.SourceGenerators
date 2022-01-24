@@ -6,9 +6,12 @@
       Severity: Info,
       WarningLevel: 1,
       Location: theFile: (1,2)-(3,4),
+      Description: ,
+      HelpLink: ,
       MessageFormat: the message from {0},
       Message: the message from hello world generator,
-      Category: the category
+      Category: the category,
+      CustomTags: []
     }
   ]
 }

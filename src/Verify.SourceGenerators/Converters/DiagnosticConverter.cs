@@ -1,51 +1,23 @@
 ﻿using Microsoft.CodeAnalysis;
-using Newtonsoft.Json;
 
 class DiagnosticConverter :
     WriteOnlyJsonConverter<Diagnostic>
 {
-    public override void Write(VerifyJsonWriter writer, Diagnostic value, JsonSerializer serializer)
+    public override void Write(VerifyJsonWriter writer, Diagnostic value)
     {
         writer.WriteStartObject();
-        writer.WritePropertyName("Id");
-        writer.WriteValue(value.Id);
-        writer.WritePropertyName("Title");
-        writer.WriteValue(value.Descriptor.Title.ToString());
-        writer.WritePropertyName("Severity");
-        writer.WriteValue(value.Severity.ToString());
-        writer.WritePropertyName("WarningLevel");
-        writer.WriteValue(value.WarningLevel);
-        writer.WritePropertyName("Location");
-        writer.WriteValue(value.Location.GetMappedLineSpan().ToString());
-
-        var description = value.Descriptor.Description.ToString();
-        if (!string.IsNullOrWhiteSpace(description))
-        {
-            writer.WritePropertyName("Description");
-            writer.WriteValue(description);
-        }
-
-        if (!string.IsNullOrWhiteSpace(value.Descriptor.HelpLinkUri))
-        {
-            writer.WritePropertyName("HelpLink");
-            writer.WriteValue(value.Descriptor.HelpLinkUri);
-        }
-
-        writer.WritePropertyName("MessageFormat");
-        writer.WriteValue(value.Descriptor.MessageFormat.ToString());
-
-        writer.WritePropertyName("Message");
-        writer.WriteValue(value.GetMessage());
-
-        writer.WritePropertyName("Category");
-        writer.WriteValue(value.Descriptor.Category);
-
-        if (value.Descriptor.CustomTags.Any())
-        {
-            writer.WritePropertyName("CustomTags");
-            writer.WriteValue(value.Descriptor.CustomTags);
-        }
-
+        writer.WriteProperty(value, value.Id, "Id");
+        var descriptor = value.Descriptor;
+        writer.WriteProperty(value, descriptor.Title.ToString(), "Title");
+        writer.WriteProperty(value, value.Severity.ToString(), "Severity");
+        writer.WriteProperty(value, value.WarningLevel, "WarningLevel");
+        writer.WriteProperty(value, value.Location.GetMappedLineSpan().ToString(), "Location");
+        writer.WriteProperty(value, descriptor.Description.ToString(), "Description");
+        writer.WriteProperty(value, descriptor.HelpLinkUri, "HelpLink");
+        writer.WriteProperty(value, descriptor.MessageFormat.ToString(), "MessageFormat");
+        writer.WriteProperty(value, value.GetMessage(), "Message");
+        writer.WriteProperty(value, descriptor.Category, "Category");
+        writer.WriteProperty(value, descriptor.CustomTags, "CustomTags");
         writer.WriteEndObject();
     }
 }
