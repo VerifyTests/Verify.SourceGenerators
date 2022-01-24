@@ -139,14 +139,17 @@ An info file containing all metadata about the current state. eg any Diagnostics
       Severity: Info,
       WarningLevel: 1,
       Location: theFile: (1,2)-(3,4),
+      Description: ,
+      HelpLink: ,
       MessageFormat: the message from {0},
       Message: the message from hello world generator,
-      Category: the category
+      Category: the category,
+      CustomTags: []
     }
   ]
 }
 ```
-<sup><a href='/src/Tests/SampleTest.Run.00.verified.txt#L1-L14' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleTest.Run.00.verified.txt' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/SampleTest.Run.00.verified.txt#L1-L17' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleTest.Run.00.verified.txt' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
