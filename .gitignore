@@ -1,15 +1,9 @@
-# Build results
-[Bb]in/
-[Oo]bj/
-
-# Visual Studio cache directory
-.vs/
-
-nugets/
-
-# ReSharper is a .NET coding add-in
-*.DotSettings.user
-
-# Approval Tests
-*.received.*
+*.suo
 *.user
+bin/
+obj/
+.vs/
+*.DotSettings.user
+.idea/
+*.received.*
+nugets/
