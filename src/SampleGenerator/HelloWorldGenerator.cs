@@ -27,10 +27,10 @@ public static class HelloWorld
 
         var location = Location.Create(
             "theFile",
-            new TextSpan(1, 2),
-            new LinePositionSpan(
-                new LinePosition(1, 2),
-                new LinePosition(3, 4)));
+            new(1, 2),
+            new(
+                new(1, 2),
+                new(3, 4)));
         var diagnostic = Diagnostic.Create(descriptor, location, "hello world generator");
         context.ReportDiagnostic(diagnostic);
     }

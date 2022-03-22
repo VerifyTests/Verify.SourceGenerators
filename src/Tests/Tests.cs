@@ -5,44 +5,32 @@ using Microsoft.CodeAnalysis.Text;
 public class Tests
 {
     [Fact]
-    public Task LocationConverter()
-    {
-        return Verify(Location.Create(
+    public Task LocationConverter() =>
+        Verify(Location.Create(
             "theFile",
-            new TextSpan(1, 2),
-            new LinePositionSpan(
-                new LinePosition(1, 2),
-                new LinePosition(3, 4))));
-    }
+            new(1, 2),
+            new(
+                new(1, 2),
+                new(3, 4))));
 
     [Fact]
-    public Task SourceTextConverter()
-    {
-        return Verify(SourceText.From("theSource", Encoding.UTF8));
-    }
+    public Task SourceTextConverter() =>
+        Verify(SourceText.From("theSource", Encoding.UTF8));
 
     [Fact]
-    public Task LocalizableStringConverter()
-    {
-        return Verify(new LocalizableStringImp());
-    }
+    public Task LocalizableStringConverter() =>
+        Verify(new LocalizableStringImp());
 
     class LocalizableStringImp :
         LocalizableString
     {
-        protected override string GetText(IFormatProvider? formatProvider)
-        {
-            return "The Text";
-        }
+        protected override string GetText(IFormatProvider? formatProvider) =>
+            "The Text";
 
-        protected override int GetHash()
-        {
+        protected override int GetHash() =>
             throw new NotImplementedException();
-        }
 
-        protected override bool AreEqual(object? other)
-        {
+        protected override bool AreEqual(object? other) =>
             throw new NotImplementedException();
-        }
     }
 }

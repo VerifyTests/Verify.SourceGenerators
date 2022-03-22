@@ -66,8 +66,6 @@ public static class VerifySourceGenerators
         return new("cs", data);
     }
 
-    static ConversionResult Convert(GeneratorDriver target, IReadOnlyDictionary<string, object> context)
-    {
-        return Convert(target.GetRunResult(), context);
-    }
+    static ConversionResult Convert(GeneratorDriver target, IReadOnlyDictionary<string, object> context) =>
+        Convert(target.GetRunResult(), context);
 }
