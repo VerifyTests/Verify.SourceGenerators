@@ -34,7 +34,10 @@ public static class VerifySourceGenerators
                 exceptions.Add(result.Exception);
             }
 
-            targets.AddRange(result.GeneratedSources.Select(SourceToTarget));
+            var collection = result.GeneratedSources
+                .OrderBy(x => x.HintName)
+                .Select(SourceToTarget);
+            targets.AddRange(collection);
         }
 
         if (exceptions.Count == 1)

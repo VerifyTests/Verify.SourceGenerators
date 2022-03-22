@@ -1,4 +1,4 @@
-﻿//HintName: helloWorldGenerator.cs
+﻿//HintName: helloWorld.cs
 using System;
 public static class HelloWorld
 {
