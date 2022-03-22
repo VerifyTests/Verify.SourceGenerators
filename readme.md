@@ -47,7 +47,16 @@ public class HelloWorldGenerator :
 {
     public void Execute(GeneratorExecutionContext context)
     {
-        var source = @"using System;
+        var source1 = @"using System;
+public static class Helper
+{
+    public static void Method()
+    {
+    }
+}";
+        context.AddSource("helper", SourceText.From(source1, Encoding.UTF8));
+
+        var source2 = @"using System;
 public static class HelloWorld
 {
     public static void SayHello()
@@ -55,7 +64,7 @@ public static class HelloWorld
         Console.WriteLine(""Hello from generated code!"");
     }
 }";
-        context.AddSource("helloWorldGenerator", SourceText.From(source, Encoding.UTF8));
+        context.AddSource("helloWorld", SourceText.From(source2, Encoding.UTF8));
 
         var descriptor = new DiagnosticDescriptor(
             id: "theId",
@@ -80,7 +89,7 @@ public static class HelloWorld
     }
 }
 ```
-<sup><a href='/src/SampleGenerator/HelloWorldGenerator.cs#L1-L41' title='Snippet source file'>snippet source</a> | <a href='#snippet-HelloWorldGenerator.cs' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/SampleGenerator/HelloWorldGenerator.cs#L1-L50' title='Snippet source file'>snippet source</a> | <a href='#snippet-HelloWorldGenerator.cs' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -103,7 +112,7 @@ public class SampleTest
     public Task Run()
     {
         var compilation = CSharpCompilation.Create("name");
-        HelloWorldGenerator generator = new();
+        var generator = new HelloWorldGenerator();
 
         GeneratorDriver driver = CSharpGeneratorDriver.Create(generator);
 
@@ -158,7 +167,7 @@ Multiple source files. One for each `GeneratorDriverRunResult.Results.GeneratedS
 <!-- snippet: SampleTest.Run.01.verified.cs -->
 <a id='snippet-SampleTest.Run.01.verified.cs'></a>
 ```cs
-//HintName: helloWorldGenerator.cs
+//HintName: helloWorld.cs
 using System;
 public static class HelloWorld
 {

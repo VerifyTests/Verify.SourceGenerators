@@ -8,7 +8,7 @@ public class SampleTest
     public Task Run()
     {
         var compilation = CSharpCompilation.Create("name");
-        HelloWorldGenerator generator = new();
+        var generator = new HelloWorldGenerator();
 
         GeneratorDriver driver = CSharpGeneratorDriver.Create(generator);
 
