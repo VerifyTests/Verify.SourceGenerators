@@ -54,7 +54,7 @@ public static class Helper
     {
     }
 }";
-        context.AddSource("helper", SourceText.From(source1));
+        context.AddSource("helper", SourceText.From(source1, Encoding.UTF8));
 
         var source2 = @"using System;
 public static class HelloWorld
@@ -64,7 +64,7 @@ public static class HelloWorld
         Console.WriteLine(""Hello from generated code!"");
     }
 }";
-        context.AddSource("helloWorld", SourceText.From(source2));
+        context.AddSource("helloWorld", SourceText.From(source2, Encoding.UTF8));
 
         var descriptor = new DiagnosticDescriptor(
             id: "theId",
@@ -167,7 +167,7 @@ Multiple source files. One for each `GeneratorDriverRunResult.Results.GeneratedS
 <!-- snippet: SampleTest.Run.01.verified.cs -->
 <a id='snippet-SampleTest.Run.01.verified.cs'></a>
 ```cs
-//HintName: helloWorldGenerator.cs
+//HintName: helloWorld.cs
 using System;
 public static class HelloWorld
 {
