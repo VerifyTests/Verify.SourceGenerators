@@ -66,7 +66,7 @@ public static class VerifySourceGenerators
     {
         var data = $@"//HintName: {source.HintName}
 {source.SourceText}";
-        return new("cs", data);
+        return new("cs", data, Path.GetFileNameWithoutExtension(source.HintName));
     }
 
     static ConversionResult Convert(GeneratorDriver target, IReadOnlyDictionary<string, object> context) =>
