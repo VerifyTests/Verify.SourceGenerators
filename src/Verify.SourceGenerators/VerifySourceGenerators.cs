@@ -6,18 +6,15 @@ public static class VerifySourceGenerators
 {
     public static void Enable()
     {
-        VerifierSettings.ModifySerialization(settings =>
+        VerifierSettings.AddExtraSettings(serializer =>
         {
-            settings.AddExtraSettings(serializer =>
-            {
-                var converters = serializer.Converters;
-                converters.Add(new LocalizableStringConverter());
-                converters.Add(new DiagnosticConverter());
-                converters.Add(new LocationConverter());
-                converters.Add(new GeneratedSourceResultConverter());
-                converters.Add(new DiagnosticDescriptorConverter());
-                converters.Add(new SourceTextConverter());
-            });
+            var converters = serializer.Converters;
+            converters.Add(new LocalizableStringConverter());
+            converters.Add(new DiagnosticConverter());
+            converters.Add(new LocationConverter());
+            converters.Add(new GeneratedSourceResultConverter());
+            converters.Add(new DiagnosticDescriptorConverter());
+            converters.Add(new SourceTextConverter());
         });
         VerifierSettings.RegisterFileConverter<GeneratorDriver>(Convert);
         VerifierSettings.RegisterFileConverter<GeneratorDriverRunResult>(Convert);
