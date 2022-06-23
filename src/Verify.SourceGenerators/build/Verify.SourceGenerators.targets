@@ -8,4 +8,12 @@
       <DependentUpon>%(ParentFile)%(ParentExtension)</DependentUpon>
     </None>
   </ItemGroup>
+
+  <PropertyGroup>
+    <Verify_AddModuleInitializer>true</Verify_AddModuleInitializer>
+  </PropertyGroup>
+  
+  <ItemGroup Condition="$(Verify_AddModuleInitializer)">
+    <Compile Include="$(MSBuildThisFileDirectory)ModuleInitializer.cs" Visible="false" />
+  </ItemGroup>
 </Project>

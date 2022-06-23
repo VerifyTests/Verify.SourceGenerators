@@ -15,22 +15,27 @@ Install one of the Verify [testing framework adapters](https://github.com/verify
 
 ## Initialize
 
-Call `VerifySourceGenerators.Enable()` once at assembly load time.
-
+The package requires a call to `VerifySourceGenerators.Enable()` once 
+at assembly load time and automatically adds a file with the following content:
 ```cs
-using System.Runtime.CompilerServices;
-using VerifyTests;
-
-public static class ModuleInitializer
+namespace VerifyTests
 {
-    [ModuleInitializer]
-    public static void Init()
+    public static class ModuleInitializer
     {
-        VerifySourceGenerators.Enable();
+        [global::System.Runtime.CompilerServices.ModuleInitializer]
+        public static void Initialize()
+        {
+            global::VerifyTests.VerifySourceGenerators.Enable();
+        }
     }
 }
 ```
-
+To disable this behavior and do it manually, use:
+```xml
+  <PropertyGroup>
+    <Verify_AddModuleInitializer>false</Verify_AddModuleInitializer>
+  </PropertyGroup>
+```
 
 ## Generator
 
