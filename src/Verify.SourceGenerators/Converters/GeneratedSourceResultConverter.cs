@@ -6,8 +6,8 @@ class GeneratedSourceResultConverter :
     public override void Write(VerifyJsonWriter writer, GeneratedSourceResult value)
     {
         writer.WriteStartObject();
-        writer.WriteProperty(value, value.HintName, "HintName");
-        writer.WriteProperty(value, value.ToString(), "Source");
+        writer.WriteMember(value, value.HintName, "HintName");
+        writer.WriteMember(value, value.ToString(), "Source");
         writer.WriteEndObject();
     }
 }
