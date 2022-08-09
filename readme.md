@@ -151,13 +151,12 @@ An info file containing all metadata about the current state. eg any Diagnostics
       HelpLink: ,
       MessageFormat: the message from {0},
       Message: the message from hello world generator,
-      Category: the category,
-      CustomTags: []
+      Category: the category
     }
   ]
 }
 ```
-<sup><a href='/src/Tests/SampleTest.Run.00.verified.txt#L1-L17' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleTest.Run.00.verified.txt' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/SampleTest.Run.00.verified.txt#L1-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleTest.Run.00.verified.txt' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
