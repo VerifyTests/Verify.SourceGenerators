@@ -10,8 +10,7 @@
       HelpLink: ,
       MessageFormat: the message from {0},
       Message: the message from hello world generator,
-      Category: the category,
-      CustomTags: []
+      Category: the category
     }
   ]
 }
