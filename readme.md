@@ -15,21 +15,16 @@ Install one of the Verify [testing framework adapters](https://github.com/verify
 
 ## Initialize
 
-Call `VerifySourceGenerators.Enable()` once at assembly load time.
-
+<!-- snippet: enable -->
+<a id='snippet-enable'></a>
 ```cs
-using System.Runtime.CompilerServices;
-using VerifyTests;
-
-public static class ModuleInitializer
+[ModuleInitializer]
+public static void Init()
 {
-    [ModuleInitializer]
-    public static void Init()
-    {
-        VerifySourceGenerators.Enable();
-    }
-}
+    VerifySourceGenerators.Enable();
 ```
+<sup><a href='/src/Tests/ModuleInitializer.cs#L3-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-enable' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
 
 
 ## Generator
