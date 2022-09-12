@@ -105,20 +105,43 @@ using Microsoft.CodeAnalysis.CSharp;
 public class SampleTest
 {
     [Fact]
-    public Task Run()
+    public Task Driver()
+    {
+        var driver = GeneratorDriver();
+
+        return Verify(driver);
+    }
+
+    [Fact]
+    public Task RunResults()
+    {
+        var driver = GeneratorDriver();
+
+        var runResults = driver.GetRunResult();
+        return Verify(runResults);
+    }
+
+    [Fact]
+    public Task RunResult()
+    {
+        var driver = GeneratorDriver();
+
+        var runResult = driver.GetRunResult().Results.Single();
+        return Verify(runResult);
+    }
+
+    static GeneratorDriver GeneratorDriver()
     {
         var compilation = CSharpCompilation.Create("name");
         var generator = new HelloWorldGenerator();
 
         GeneratorDriver driver = CSharpGeneratorDriver.Create(generator);
 
-        driver = driver.RunGenerators(compilation);
-
-        return Verify(driver);
+        return driver.RunGenerators(compilation);
     }
 }
 ```
-<sup><a href='/src/Tests/SampleTest.cs#L1-L19' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleTest.cs' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/SampleTest.cs#L1-L42' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleTest.cs' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -131,8 +154,8 @@ And will result in the following verified files:
 
 An info file containing all metadata about the current state. eg any Diagnostics.
 
-<!-- snippet: SampleTest.Run.verified.txt -->
-<a id='snippet-SampleTest.Run.verified.txt'></a>
+<!-- snippet: SampleTest.Driver.verified.txt -->
+<a id='snippet-SampleTest.Driver.verified.txt'></a>
 ```txt
 {
   Diagnostics: [
@@ -151,7 +174,7 @@ An info file containing all metadata about the current state. eg any Diagnostics
   ]
 }
 ```
-<sup><a href='/src/Tests/SampleTest.Run.verified.txt#L1-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleTest.Run.verified.txt' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/SampleTest.Driver.verified.txt#L1-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleTest.Driver.verified.txt' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -159,8 +182,8 @@ An info file containing all metadata about the current state. eg any Diagnostics
 
 Multiple source files. One for each `GeneratorDriverRunResult.Results.GeneratedSources`.
 
-<!-- snippet: SampleTest.Run#helloWorld.verified.cs -->
-<a id='snippet-SampleTest.Run#helloWorld.verified.cs'></a>
+<!-- snippet: SampleTest.Driver#helloWorld.verified.cs -->
+<a id='snippet-SampleTest.Driver#helloWorld.verified.cs'></a>
 ```cs
 //HintName: helloWorld.cs
 using System;
@@ -172,7 +195,7 @@ public static class HelloWorld
     }
 }
 ```
-<sup><a href='/src/Tests/SampleTest.Run#helloWorld.verified.cs#L1-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleTest.Run#helloWorld.verified.cs' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/SampleTest.Driver#helloWorld.verified.cs#L1-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleTest.Driver#helloWorld.verified.cs' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
