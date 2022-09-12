@@ -155,7 +155,7 @@ An info file containing all metadata about the current state. eg any Diagnostics
 <!-- endSnippet -->
 
 
-### Source FIles
+### Source Files
 
 Multiple source files. One for each `GeneratorDriverRunResult.Results.GeneratedSources`.
 
