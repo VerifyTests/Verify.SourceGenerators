@@ -2,8 +2,8 @@
 using Microsoft.CodeAnalysis.CSharp;
 
 [UsesVerify]
-public class SampleTest
-{
+    public class SampleTest
+    {
     [Fact]
     public Task Driver()
     {

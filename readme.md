@@ -102,8 +102,8 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 
 [UsesVerify]
-public class SampleTest
-{
+    public class SampleTest
+    {
     [Fact]
     public Task Driver()
     {
@@ -198,6 +198,28 @@ public static class HelloWorld
 <sup><a href='/src/Tests/SampleTest.Driver#helloWorld.verified.cs#L1-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleTest.Driver#helloWorld.verified.cs' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
+
+## Manipulating Source
+
+To manipulating the source of in the generated files, use [Scrubbers](https://github.com/VerifyTests/Verify/blob/main/docs/scrubbers.md.
+
+For example to remove all lines start with `using`:
+
+<!-- snippet: ScrubLines -->
+<a id='snippet-scrublines'></a>
+```cs
+[Fact]
+public Task ScrubLines()
+{
+    var driver = GeneratorDriver();
+
+    return Verify(driver)
+        .ScrubLines(_ => _.StartsWith("using "));
+}
+```
+<sup><a href='/src/Tests/ScrubTest.cs#L7-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-scrublines' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+ 
 
 ## Notes:
 
