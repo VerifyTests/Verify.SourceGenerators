@@ -4,7 +4,6 @@
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="Argon" Version="0.1.0" />
     <PackageReference Include="MarkdownSnippets.MsBuild" Version="24.5.0" PrivateAssets="all" />
     <PackageReference Include="Xunit" Version="2.4.2" />
