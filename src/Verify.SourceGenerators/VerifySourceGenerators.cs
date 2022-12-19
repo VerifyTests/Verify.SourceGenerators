@@ -6,6 +6,7 @@ public static class VerifySourceGenerators
 {
     public static void Enable()
     {
+        InnerVerifier.ThrowIfVerifyHasBeenRun();
         VerifierSettings.AddExtraSettings(serializer =>
         {
             var converters = serializer.Converters;
@@ -61,8 +62,10 @@ public static class VerifySourceGenerators
 
     static Target SourceToTarget(GeneratedSourceResult source)
     {
-        var data = $@"//HintName: {source.HintName}
-{source.SourceText}";
+        var data = $"""
+            //HintName: {source.HintName}
+            {source.SourceText}
+            """;
         return new("cs", data, Path.GetFileNameWithoutExtension(source.HintName));
     }
 
