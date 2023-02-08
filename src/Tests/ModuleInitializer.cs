@@ -4,7 +4,7 @@
 
     [ModuleInitializer]
     public static void Init() =>
-        VerifySourceGenerators.Enable();
+        VerifySourceGenerators.Initialize();
 
     #endregion
 
