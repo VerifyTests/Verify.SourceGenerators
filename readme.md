@@ -1,5 +1,6 @@
 # <img src="/src/icon.png" height="30px"> Verify.SourceGenerators
 
+[![Discussions](https://img.shields.io/badge/Verify-Discussions-yellow?svg=true&label=)](https://github.com/orgs/VerifyTests/discussions)
 [![Build status](https://ci.appveyor.com/api/projects/status/2ip7do6jk0gevt0v?svg=true)](https://ci.appveyor.com/project/SimonCropp/Verify-SourceGenerators)
 [![NuGet Status](https://img.shields.io/nuget/v/Verify.SourceGenerators.svg)](https://www.nuget.org/packages/Verify.SourceGenerators/)
 
@@ -20,7 +21,7 @@ Install one of the Verify [testing framework adapters](https://github.com/verify
 ```cs
 [ModuleInitializer]
 public static void Init() =>
-    VerifySourceGenerators.Enable();
+    VerifySourceGenerators.Initialize();
 ```
 <sup><a href='/src/Tests/ModuleInitializer.cs#L3-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-enable' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
