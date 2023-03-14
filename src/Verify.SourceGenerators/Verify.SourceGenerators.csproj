@@ -4,9 +4,9 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Argon" Version="0.5.0" />
-    <PackageReference Include="Polyfill" Version="0.5.0" PrivateAssets="All" />
+    <PackageReference Include="Polyfill" Version="0.9.0" PrivateAssets="All" />
     <PackageReference Include="Verify" Version="19.11.1" />
-    <PackageReference Include="ProjectDefaults" Version="1.0.89" PrivateAssets="all" />
+    <PackageReference Include="ProjectDefaults" Version="1.0.90" PrivateAssets="all" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.5.0" PrivateAssets="all" />
     <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4" PrivateAssets="all" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" Condition="$(Configuration) == 'Release'" />
