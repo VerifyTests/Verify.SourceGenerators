@@ -3,7 +3,7 @@
     <TargetFrameworks>netstandard2.0;netcoreapp3.1</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Argon" Version="0.5.1" />
+    <PackageReference Include="Argon" Version="0.5.2" />
     <PackageReference Include="Polyfill" Version="1.14.0" PrivateAssets="all" />
     <PackageReference Include="Verify" Version="19.12.1" />
     <PackageReference Include="ProjectDefaults" Version="1.0.90" PrivateAssets="all" />

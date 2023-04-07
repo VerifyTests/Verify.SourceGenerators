@@ -4,7 +4,7 @@
     <TargetFramework>net7.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Argon" Version="0.5.1" />
+    <PackageReference Include="Argon" Version="0.5.2" />
     <PackageReference Include="MarkdownSnippets.MsBuild" Version="24.5.1" />
     <PackageReference Include="Xunit" Version="2.4.2" />
     <PackageReference Include="Verify.Xunit" Version="19.12.0" />
