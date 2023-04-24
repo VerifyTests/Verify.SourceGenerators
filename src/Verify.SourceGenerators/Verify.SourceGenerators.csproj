@@ -3,9 +3,9 @@
     <TargetFrameworks>netstandard2.0;netcoreapp3.1</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Argon" Version="0.5.2" />
-    <PackageReference Include="Polyfill" Version="1.17.1" PrivateAssets="all" />
-    <PackageReference Include="Verify" Version="19.12.3" />
+    <PackageReference Include="Argon" Version="0.6.0" />
+    <PackageReference Include="Polyfill" Version="1.18.0" PrivateAssets="all" />
+    <PackageReference Include="Verify" Version="19.13.0" />
     <PackageReference Include="ProjectDefaults" Version="1.0.90" PrivateAssets="all" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.5.0" PrivateAssets="all" />
     <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4" PrivateAssets="all" />
