@@ -46,7 +46,7 @@ public static class VerifySourceGenerators
             }
 
             var collection = result.GeneratedSources
-                .OrderBy(x => x.HintName)
+                .OrderBy(_ => _.HintName)
                 .Select(SourceToTarget);
             targets.AddRange(collection);
         }
