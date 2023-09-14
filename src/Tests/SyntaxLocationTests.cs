@@ -9,10 +9,12 @@ public class SyntaxLocationTests
     public Task ConsistentLocation()
     {
         var sourceText =
-@"class Foo {
-void Bar() { }
-}
-";
+            """
+            class Foo {
+            void Bar() { }
+            }
+
+            """;
 
         var source = SourceText.From(sourceText);
         var syntaxTree = SyntaxFactory.ParseSyntaxTree(source);

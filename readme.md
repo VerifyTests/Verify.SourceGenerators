@@ -43,23 +43,27 @@ public class HelloWorldGenerator :
 {
     public void Execute(GeneratorExecutionContext context)
     {
-        var source1 = @"using System;
-public static class Helper
-{
-    public static void Method()
-    {
-    }
-}";
+        var source1 = """
+                      using System;
+                      public static class Helper
+                      {
+                          public static void Method()
+                          {
+                          }
+                      }
+                      """;
         context.AddSource("helper", SourceText.From(source1, Encoding.UTF8));
 
-        var source2 = @"using System;
-public static class HelloWorld
-{
-    public static void SayHello()
-    {
-        Console.WriteLine(""Hello from generated code!"");
-    }
-}";
+        var source2 = """
+                      using System;
+                      public static class HelloWorld
+                      {
+                          public static void SayHello()
+                          {
+                              Console.WriteLine("Hello from generated code!");
+                          }
+                      }
+                      """;
         context.AddSource("helloWorld", SourceText.From(source2, Encoding.UTF8));
 
         var descriptor = new DiagnosticDescriptor(
@@ -85,7 +89,7 @@ public static class HelloWorld
     }
 }
 ```
-<sup><a href='/src/SampleGenerator/HelloWorldGenerator.cs#L1-L50' title='Snippet source file'>snippet source</a> | <a href='#snippet-HelloWorldGenerator.cs' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/SampleGenerator/HelloWorldGenerator.cs#L1-L54' title='Snippet source file'>snippet source</a> | <a href='#snippet-HelloWorldGenerator.cs' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
