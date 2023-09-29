@@ -12,8 +12,18 @@ class DiagnosticConverter :
         writer.WriteMember(value, value.Severity.ToString(), "Severity");
         writer.WriteMember(value, value.WarningLevel, "WarningLevel");
         writer.WriteMember(value, value.Location.GetMappedLineSpan().ToString(), "Location");
-        writer.WriteMember(value, descriptor.Description.ToString(), "Description");
-        writer.WriteMember(value, descriptor.HelpLinkUri, "HelpLink");
+        var description = descriptor.Description.ToString();
+        if (!string.IsNullOrWhiteSpace(description))
+        {
+            writer.WriteMember(value, description, "Description");
+        }
+
+        var help = descriptor.HelpLinkUri;
+        if (!string.IsNullOrWhiteSpace(help))
+        {
+            writer.WriteMember(value, help, "HelpLink");
+        }
+
         writer.WriteMember(value, descriptor.MessageFormat.ToString(), "MessageFormat");
         writer.WriteMember(value, value.GetMessage(), "Message");
         writer.WriteMember(value, descriptor.Category, "Category");
