@@ -72,9 +72,9 @@ public static class VerifySourceGenerators
     static Target SourceToTarget(GeneratedSourceResult source)
     {
         var data = $"""
-            //HintName: {source.HintName}
-            {source.SourceText}
-            """;
+                    //HintName: {source.HintName}
+                    {source.SourceText}
+                    """;
         return new("cs", data, Path.GetFileNameWithoutExtension(source.HintName));
     }
 

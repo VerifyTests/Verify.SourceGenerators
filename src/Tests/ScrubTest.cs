@@ -20,8 +20,7 @@ public class ScrubTest
         var compilation = CSharpCompilation.Create("name");
         var generator = new HelloWorldGenerator();
 
-        GeneratorDriver driver = CSharpGeneratorDriver.Create(generator);
-
+        var driver = CSharpGeneratorDriver.Create(generator);
         return driver.RunGenerators(compilation);
     }
 }

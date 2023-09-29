@@ -108,8 +108,8 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 
 [UsesVerify]
-    public class SampleTest
-    {
+public class SampleTest
+{
     [Fact]
     public Task Driver()
     {
@@ -141,13 +141,12 @@ using Microsoft.CodeAnalysis.CSharp;
         var compilation = CSharpCompilation.Create("name");
         var generator = new HelloWorldGenerator();
 
-        GeneratorDriver driver = CSharpGeneratorDriver.Create(generator);
-
+        var driver = CSharpGeneratorDriver.Create(generator);
         return driver.RunGenerators(compilation);
     }
 }
 ```
-<sup><a href='/src/Tests/SampleTest.cs#L1-L42' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleTest.cs' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/SampleTest.cs#L1-L41' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleTest.cs' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 

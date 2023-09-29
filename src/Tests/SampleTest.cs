@@ -2,8 +2,8 @@
 using Microsoft.CodeAnalysis.CSharp;
 
 [UsesVerify]
-    public class SampleTest
-    {
+public class SampleTest
+{
     [Fact]
     public Task Driver()
     {
@@ -35,8 +35,7 @@ using Microsoft.CodeAnalysis.CSharp;
         var compilation = CSharpCompilation.Create("name");
         var generator = new HelloWorldGenerator();
 
-        GeneratorDriver driver = CSharpGeneratorDriver.Create(generator);
-
+        var driver = CSharpGeneratorDriver.Create(generator);
         return driver.RunGenerators(compilation);
     }
 }
