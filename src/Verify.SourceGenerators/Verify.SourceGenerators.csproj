@@ -3,7 +3,7 @@
     <TargetFrameworks>net472;net6.0</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Argon" Version="0.11.0" />
+    <PackageReference Include="Argon" Version="0.12.0" />
     <PackageReference Include="Polyfill" Version="1.29.0" PrivateAssets="all" />
     <PackageReference Include="Verify" Version="21.3.0" />
     <PackageReference Include="ProjectDefaults" Version="1.0.100" PrivateAssets="all" />
