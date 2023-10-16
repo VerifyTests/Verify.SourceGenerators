@@ -7,5 +7,6 @@
     <LangVersion>preview</LangVersion>
     <PackageTags>Source Generator, Verify</PackageTags>
     <Description>Extends Verify (https://github.com/VerifyTests/Verify) to allow verification of C# Source Generators.</Description>
+    <ResolveAssemblyReferencesSilent>true</ResolveAssemblyReferencesSilent>
   </PropertyGroup>
 </Project>
