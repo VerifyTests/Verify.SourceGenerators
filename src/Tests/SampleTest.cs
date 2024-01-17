@@ -1,7 +1,6 @@
 ﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 
-[UsesVerify]
 public class SampleTest
 {
     [Fact]

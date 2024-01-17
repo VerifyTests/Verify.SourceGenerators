@@ -2,7 +2,6 @@
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
-[UsesVerify]
 public class SyntaxLocationTests
 {
     [Fact]

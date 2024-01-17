@@ -1,7 +1,6 @@
 ﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Text;
 
-[UsesVerify]
 public class Tests
 {
     [Fact]
