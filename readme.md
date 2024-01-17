@@ -107,7 +107,6 @@ This snippets assumes use of the XUnit Verify adapter, change the `using VerifyX
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 
-[UsesVerify]
 public class SampleTest
 {
     [Fact]
@@ -146,7 +145,7 @@ public class SampleTest
     }
 }
 ```
-<sup><a href='/src/Tests/SampleTest.cs#L1-L41' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleTest.cs' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/SampleTest.cs#L1-L40' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleTest.cs' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -220,7 +219,7 @@ public Task ScrubLines()
         .ScrubLines(_ => _.StartsWith("using "));
 }
 ```
-<sup><a href='/src/Tests/ScrubTest.cs#L7-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-scrublines' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/ScrubTest.cs#L6-L15' title='Snippet source file'>snippet source</a> | <a href='#snippet-scrublines' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
  
 
