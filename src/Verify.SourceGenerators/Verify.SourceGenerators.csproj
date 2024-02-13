@@ -4,7 +4,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Argon" Version="0.15.0" />
-    <PackageReference Include="Polyfill" Version="2.2.2" PrivateAssets="all" />
+    <PackageReference Include="Polyfill" Version="2.3.0" PrivateAssets="all" />
     <PackageReference Include="Verify" Version="23.1.0" />
     <PackageReference Include="ProjectDefaults" Version="1.0.109" PrivateAssets="all" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.8.0" PrivateAssets="all" />
