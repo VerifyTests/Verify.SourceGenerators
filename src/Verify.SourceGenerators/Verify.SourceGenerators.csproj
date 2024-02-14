@@ -5,8 +5,8 @@
   <ItemGroup>
     <PackageReference Include="Argon" Version="0.17.0" />
     <PackageReference Include="Polyfill" Version="2.3.0" PrivateAssets="all" />
-    <PackageReference Include="Verify" Version="23.1.0" />
-    <PackageReference Include="ProjectDefaults" Version="1.0.109" PrivateAssets="all" />
+    <PackageReference Include="Verify" Version="23.2.0" />
+    <PackageReference Include="ProjectDefaults" Version="1.0.110" PrivateAssets="all" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.8.0" PrivateAssets="all" />
     <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4" PrivateAssets="all" />
     <Content Include="build\Verify.SourceGenerators.targets" PackagePath="build\Verify.SourceGenerators.targets" />
