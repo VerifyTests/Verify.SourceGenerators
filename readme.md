@@ -203,7 +203,7 @@ public static class HelloWorld
 
 ## Manipulating Source
 
-To manipulating the source of the generated cs files, use [Scrubbers](https://github.com/VerifyTests/Verify/blob/main/docs/scrubbers.md.
+To manipulating the source of the generated cs files, use [Scrubbers](https://github.com/VerifyTests/Verify/blob/main/docs/scrubbers.md).
 
 For example to remove all lines start with `using`:
 
