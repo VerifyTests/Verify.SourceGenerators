@@ -8,5 +8,8 @@
     <PackageTags>Source Generator, Verify</PackageTags>
     <Description>Extends Verify (https://github.com/VerifyTests/Verify) to allow verification of C# Source Generators.</Description>
     <ResolveAssemblyReferencesSilent>true</ResolveAssemblyReferencesSilent>
+    <NuGetAuditMode>all</NuGetAuditMode>
+    <NuGetAuditLevel>low</NuGetAuditLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
 </Project>
