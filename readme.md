@@ -208,7 +208,7 @@ To manipulating the source of the generated cs files, use [Scrubbers](https://gi
 For example to remove all lines start with `using`:
 
 <!-- snippet: ScrubLines -->
-<a id='snippet-scrublines'></a>
+<a id='snippet-ScrubLines'></a>
 ```cs
 [Fact]
 public Task ScrubLines()
@@ -219,7 +219,7 @@ public Task ScrubLines()
         .ScrubLines(_ => _.StartsWith("using "));
 }
 ```
-<sup><a href='/src/Tests/ScrubTest.cs#L6-L15' title='Snippet source file'>snippet source</a> | <a href='#snippet-scrublines' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/ScrubTest.cs#L6-L15' title='Snippet source file'>snippet source</a> | <a href='#snippet-ScrubLines' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
  
 
