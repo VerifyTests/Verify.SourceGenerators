@@ -5,7 +5,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="MarkdownSnippets.MsBuild" Version="27.0.2" PrivateAssets="all" />
-    <PackageReference Include="Xunit" Version="2.7.0" />
+    <PackageReference Include="Xunit" Version="2.7.1" />
     <PackageReference Include="Verify.Xunit" Version="23.7.2" />
     <PackageReference Include="Verify.DiffPlex" Version="3.0.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.5.7" PrivateAssets="all" />
