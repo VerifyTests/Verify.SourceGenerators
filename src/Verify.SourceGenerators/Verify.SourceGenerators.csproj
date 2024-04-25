@@ -3,7 +3,7 @@
     <TargetFrameworks>net472;net6.0</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Polyfill" Version="4.9.0" PrivateAssets="all" />
+    <PackageReference Include="Polyfill" Version="5.0.0" PrivateAssets="all" />
     <PackageReference Include="Verify" Version="24.1.0" />
     <PackageReference Include="ProjectDefaults" Version="1.0.126" PrivateAssets="all" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.9.2" PrivateAssets="all" />
