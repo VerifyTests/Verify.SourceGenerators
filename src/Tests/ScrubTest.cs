@@ -1,7 +1,4 @@
-﻿using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
-
-public class ScrubTest
+﻿public class ScrubTest
 {
     #region ScrubLines
     [Fact]

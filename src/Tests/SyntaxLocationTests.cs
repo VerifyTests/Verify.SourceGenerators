@@ -1,8 +1,4 @@
-﻿using Microsoft.CodeAnalysis.Text;
-using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
-
-public class SyntaxLocationTests
+﻿public class SyntaxLocationTests
 {
     [Fact]
     public Task ConsistentLocation()

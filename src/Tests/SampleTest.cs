@@ -1,7 +1,4 @@
-﻿using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
-
-public class SampleTest
+﻿public class SampleTest
 {
     [Fact]
     public Task Driver()

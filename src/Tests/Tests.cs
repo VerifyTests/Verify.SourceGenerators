@@ -1,7 +1,4 @@
-﻿using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.Text;
-
-public class Tests
+﻿public class Tests
 {
     [Fact]
     public Task LocationConverter() =>
