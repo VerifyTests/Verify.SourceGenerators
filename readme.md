@@ -236,15 +236,13 @@ public Task IgnoreFile()
 
     return Verify(driver)
         .IgnoreGeneratedResultInstance(
-            _ => _.HintName.Contains("helper"))
-        .IgnoreGeneratedResultInstance(
-            _ => _
-                .SourceText
-                .ToString()
-                .Contains("static void SayHello()"));
+            _ => _.HintName.Contains("helper") ||
+                 _.SourceText
+                     .ToString()
+                     .Contains("static void SayHello()"));
 }
 ```
-<sup><a href='/src/Tests/IgnoreTest.cs#L3-L20' title='Snippet source file'>snippet source</a> | <a href='#snippet-IgnoreFile' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/IgnoreTest.cs#L3-L18' title='Snippet source file'>snippet source</a> | <a href='#snippet-IgnoreFile' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
