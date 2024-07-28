@@ -8,7 +8,7 @@
         var driver = GeneratorDriver();
 
         return Verify(driver)
-            .IgnoreGeneratedResultInstance(
+            .IgnoreGeneratedResult(
                 _ => _.HintName.Contains("helper") ||
                      _.SourceText
                          .ToString()
@@ -22,7 +22,7 @@
     {
         var driver = GeneratorDriver();
         var settings = new VerifySettings();
-        settings.IgnoreGeneratedResultInstance(
+        settings.IgnoreGeneratedResult(
             _ => _.HintName.Contains("helper") ||
                  _.SourceText
                      .ToString()

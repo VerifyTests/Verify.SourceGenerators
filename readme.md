@@ -222,7 +222,7 @@ public Task ScrubLines()
 
   ## Ignoring Files
 
-To ignore specific source text use `IgnoreGeneratedResultInstance`. This uses an expression of type `Func<GeneratedSourceResult, bool>` to determine which outputs are ignored.
+To ignore specific source text use `IgnoreGeneratedResult`. This uses an expression of type `Func<GeneratedSourceResult, bool>` to determine which outputs are ignored.
 
 For example to ignore files with the name `helper` or that contain the text `static void SayHello()`:
 
@@ -235,7 +235,7 @@ public Task IgnoreFile()
     var driver = GeneratorDriver();
 
     return Verify(driver)
-        .IgnoreGeneratedResultInstance(
+        .IgnoreGeneratedResult(
             _ => _.HintName.Contains("helper") ||
                  _.SourceText
                      .ToString()

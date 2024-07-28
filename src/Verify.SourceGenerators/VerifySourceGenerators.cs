@@ -75,7 +75,7 @@ public static class VerifySourceGenerators
 
     static List<Func<GeneratedSourceResult, bool>>? GetIgnoreResults(IReadOnlyDictionary<string, object> context)
     {
-        if (context.TryGetValue(VerifySourceGeneratorsExtensions.IgnoreContextName, out var value))
+        if (context.TryGetValue(IgnoreContextName, out var value))
         {
             return (List<Func<GeneratedSourceResult, bool>>)value;
         }
@@ -94,4 +94,28 @@ public static class VerifySourceGenerators
 
     static ConversionResult Convert(GeneratorDriver target, IReadOnlyDictionary<string, object> context) =>
         Convert(target.GetRunResult(), context);
+
+    internal const string IgnoreContextName = $"{nameof(VerifySourceGenerators)}.{nameof(IgnoreGeneratedResult)}";
+
+    public static SettingsTask IgnoreGeneratedResult(this SettingsTask settingsTask, Func<GeneratedSourceResult, bool> shouldIgnore)
+    {
+        settingsTask.CurrentSettings.IgnoreGeneratedResult(shouldIgnore);
+        return settingsTask;
+    }
+
+    public static void IgnoreGeneratedResult(this VerifySettings verifySettings, Func<GeneratedSourceResult, bool> shouldIgnore)
+    {
+        if (!verifySettings.Context.TryGetValue(IgnoreContextName, out var value))
+        {
+            value = new List<Func<GeneratedSourceResult, bool>>();
+            verifySettings.Context.Add(IgnoreContextName, value);
+        }
+
+        if (value is not List<Func<GeneratedSourceResult, bool>> ignoreList)
+        {
+            throw new($"Unexpected value in {nameof(verifySettings.Context)}, type is not {nameof(List<Func<GeneratedSourceResult, bool>>)}");
+        }
+
+        ignoreList.Add(shouldIgnore);
+    }
 }
