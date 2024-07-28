@@ -9,12 +9,10 @@
 
         return Verify(driver)
             .IgnoreGeneratedResultInstance(
-                _ => _.HintName.Contains("helper"))
-            .IgnoreGeneratedResultInstance(
-                _ => _
-                    .SourceText
-                    .ToString()
-                    .Contains("static void SayHello()"));
+                _ => _.HintName.Contains("helper") ||
+                     _.SourceText
+                         .ToString()
+                         .Contains("static void SayHello()"));
     }
 
     #endregion
@@ -25,12 +23,10 @@
         var driver = GeneratorDriver();
         var settings = new VerifySettings();
         settings.IgnoreGeneratedResultInstance(
-            _ => _.HintName.Contains("helper"));
-        settings.IgnoreGeneratedResultInstance(
-            _ => _
-                .SourceText
-                .ToString()
-                .Contains("static void SayHello()"));
+            _ => _.HintName.Contains("helper") ||
+                 _.SourceText
+                     .ToString()
+                     .Contains("static void SayHello()"));
 
         return Verify(driver, settings);
     }
