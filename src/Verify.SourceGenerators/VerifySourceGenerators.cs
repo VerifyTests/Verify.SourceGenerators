@@ -97,23 +97,23 @@ public static class VerifySourceGenerators
 
     internal const string IgnoreContextName = $"{nameof(VerifySourceGenerators)}.{nameof(IgnoreGeneratedResult)}";
 
-    public static SettingsTask IgnoreGeneratedResult(this SettingsTask settingsTask, Func<GeneratedSourceResult, bool> shouldIgnore)
+    public static SettingsTask IgnoreGeneratedResult(this SettingsTask settings, Func<GeneratedSourceResult, bool> shouldIgnore)
     {
-        settingsTask.CurrentSettings.IgnoreGeneratedResult(shouldIgnore);
-        return settingsTask;
+        settings.CurrentSettings.IgnoreGeneratedResult(shouldIgnore);
+        return settings;
     }
 
-    public static void IgnoreGeneratedResult(this VerifySettings verifySettings, Func<GeneratedSourceResult, bool> shouldIgnore)
+    public static void IgnoreGeneratedResult(this VerifySettings settings, Func<GeneratedSourceResult, bool> shouldIgnore)
     {
-        if (!verifySettings.Context.TryGetValue(IgnoreContextName, out var value))
+        if (!settings.Context.TryGetValue(IgnoreContextName, out var value))
         {
             value = new List<Func<GeneratedSourceResult, bool>>();
-            verifySettings.Context.Add(IgnoreContextName, value);
+            settings.Context.Add(IgnoreContextName, value);
         }
 
         if (value is not List<Func<GeneratedSourceResult, bool>> ignoreList)
         {
-            throw new($"Unexpected value in {nameof(verifySettings.Context)}, type is not {nameof(List<Func<GeneratedSourceResult, bool>>)}");
+            throw new($"Unexpected value in {nameof(settings.Context)}, type is not {nameof(List<Func<GeneratedSourceResult, bool>>)}");
         }
 
         ignoreList.Add(shouldIgnore);
