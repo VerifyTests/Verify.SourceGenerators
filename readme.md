@@ -220,6 +220,31 @@ public Task ScrubLines()
 <!-- endSnippet -->
  
 
+  ## Ignoring Files
+
+To ignore specific source text use `IgnoreGeneratedResultInstance`. This uses an expression of type `Func<GeneratedSourceResult, bool>` to determine which outputs are ignored.
+
+For example to ignore files with the name `helper` or that contain the text `static void SayHello()`:
+
+<!-- snippet: IgnoreFile -->
+<a id='snippet-IgnoreFile'></a>
+```cs
+[Fact]
+public Task IgnoreFile()
+{
+    var driver = GeneratorDriver();
+
+    return Verify(driver)
+        .IgnoreGeneratedResultInstance(x => x.HintName.Contains("helper"))
+        .IgnoreGeneratedResultInstance(x => x.SourceText
+            .ToString()
+            .Contains("static void SayHello()"));
+}
+```
+<sup><a href='/src/Tests/IgnoreTest.cs#L6-L18' title='Snippet source file'>snippet source</a> | <a href='#snippet-IgnoreFile' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+
 ## Notes:
 
  * [Source Generators Cookbook / Testing](https://github.com/dotnet/roslyn/blob/main/docs/features/source-generators.cookbook.md#unit-testing-of-generators)

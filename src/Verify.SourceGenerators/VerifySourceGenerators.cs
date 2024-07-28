@@ -34,6 +34,9 @@ public static class VerifySourceGenerators
     {
         var exceptions = new List<Exception>();
         var targets = new List<Target>();
+        context.TryGetValue(VerifySourceGeneratorsExtensions.IgnoreContextName, out var ignoreResultsObj);
+        var ignoreResults = ignoreResultsObj as List<Func<GeneratedSourceResult, bool>> ?? new();
+
         foreach (var result in target.Results)
         {
             if (result.Exception != null)
@@ -42,6 +45,7 @@ public static class VerifySourceGenerators
             }
 
             var collection = result.GeneratedSources
+                .Where(source => !ignoreResults.Any(fn => fn(source)))
                 .OrderBy(_ => _.HintName)
                 .Select(SourceToTarget);
             targets.AddRange(collection);
