@@ -4,8 +4,8 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="MarkdownSnippets.MsBuild" PrivateAssets="all" />
-    <PackageReference Include="Xunit" />
-    <PackageReference Include="Verify.Xunit" />
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="Verify.XunitV3" />
     <PackageReference Include="Verify.DiffPlex" />
     <PackageReference Include="xunit.runner.visualstudio" PrivateAssets="all" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
