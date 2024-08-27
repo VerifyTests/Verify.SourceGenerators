@@ -1,4 +1,5 @@
-﻿using Microsoft.CodeAnalysis;
+﻿using System.Globalization;
+using Microsoft.CodeAnalysis;
 
 class DiagnosticDescriptorConverter :
     WriteOnlyJsonConverter<DiagnosticDescriptor>
@@ -7,9 +8,9 @@ class DiagnosticDescriptorConverter :
     {
         writer.WriteStartObject();
         writer.WriteMember(value, value.Id, "Id");
-        writer.WriteMember(value, value.Title.ToString(), "Title");
+        writer.WriteMember(value, value.Title, "Title");
 
-        var description = value.Description.ToString();
+        var description = value.Description.ToString(CultureInfo.InvariantCulture);
         if (!string.IsNullOrWhiteSpace(description))
         {
             writer.WriteMember(value, description, "Description");
@@ -20,7 +21,7 @@ class DiagnosticDescriptorConverter :
         {
             writer.WriteMember(value, help, "HelpLink");
         }
-        writer.WriteMember(value, value.MessageFormat.ToString(), "MessageFormat");
+        writer.WriteMember(value, value.MessageFormat, "MessageFormat");
         writer.WriteMember(value, value.Category, "Category");
         writer.WriteMember(value, value.DefaultSeverity, "DefaultSeverity");
         writer.WriteMember(value, value.IsEnabledByDefault, "IsEnabledByDefault");
