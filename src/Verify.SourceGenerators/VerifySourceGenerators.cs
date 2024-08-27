@@ -22,6 +22,7 @@ public static class VerifySourceGenerators
             converters.Add(new LocalizableStringConverter());
             converters.Add(new DiagnosticConverter());
             converters.Add(new LocationConverter());
+            converters.Add(new FileLinePositionSpanConverter());
             converters.Add(new GeneratedSourceResultConverter());
             converters.Add(new DiagnosticDescriptorConverter());
             converters.Add(new SourceTextConverter());
