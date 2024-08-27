@@ -13,8 +13,8 @@
     {
         var driver = GeneratorDriver();
 
-        var runResults = driver.GetRunResult();
-        return Verify(runResults);
+        var results = driver.GetRunResult();
+        return Verify(results);
     }
 
     [Fact]
