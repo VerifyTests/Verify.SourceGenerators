@@ -66,7 +66,8 @@ public class HelloWorldGenerator :
                           }
                       }
                       """;
-        context.AddSource("helloWorld", SourceText.From(source2, Encoding.UTF8));
+        var sourceText = SourceText.From(source2, Encoding.UTF8);
+        context.AddSource("helloWorld", sourceText);
 
         var descriptor = new DiagnosticDescriptor(
             id: "theId",
@@ -91,7 +92,7 @@ public class HelloWorldGenerator :
     }
 }
 ```
-<sup><a href='/src/SampleGenerator/HelloWorldGenerator.cs#L1-L54' title='Snippet source file'>snippet source</a> | <a href='#snippet-HelloWorldGenerator.cs' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/SampleGenerator/HelloWorldGenerator.cs#L1-L55' title='Snippet source file'>snippet source</a> | <a href='#snippet-HelloWorldGenerator.cs' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -109,7 +110,7 @@ public class SampleTest
     [Fact]
     public Task Driver()
     {
-        var driver = GeneratorDriver();
+        var driver = BuildDriver();
 
         return Verify(driver);
     }
@@ -117,7 +118,7 @@ public class SampleTest
     [Fact]
     public Task RunResults()
     {
-        var driver = GeneratorDriver();
+        var driver = BuildDriver();
 
         var results = driver.GetRunResult();
         return Verify(results);
@@ -126,13 +127,13 @@ public class SampleTest
     [Fact]
     public Task RunResult()
     {
-        var driver = GeneratorDriver();
+        var driver = BuildDriver();
 
         var result = driver.GetRunResult().Results.Single();
         return Verify(result);
     }
 
-    static GeneratorDriver GeneratorDriver()
+    static GeneratorDriver BuildDriver()
     {
         var compilation = CSharpCompilation.Create("name");
         var generator = new HelloWorldGenerator();

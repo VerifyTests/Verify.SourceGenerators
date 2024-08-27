@@ -85,11 +85,28 @@ public static class VerifySourceGenerators
 
     static Target SourceToTarget(GeneratedSourceResult source)
     {
+        var hintName = source.HintName;
         var data = $"""
-                    //HintName: {source.HintName}
+                    //HintName: {hintName}
                     {source.SourceText}
                     """;
-        return new("cs", data, Path.GetFileNameWithoutExtension(source.HintName));
+        var filePath = source.SyntaxTree.FilePath;
+        if (filePath.Length > 0)
+        {
+            var extension = Path.GetExtension(filePath)[1..];
+            var name = Path.GetFileNameWithoutExtension(filePath);
+            return new(extension, data, name);
+        }
+        else
+        {
+            var name = Path.GetFileNameWithoutExtension(hintName);
+            if (hintName.EndsWith(".vb"))
+            {
+                return new("vb", data, name);
+            }
+
+            return new("cs", data, name);
+        }
     }
 
     static ConversionResult Convert(GeneratorDriver target, IReadOnlyDictionary<string, object> context) =>

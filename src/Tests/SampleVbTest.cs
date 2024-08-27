@@ -1,4 +1,6 @@
-﻿public class SampleTest
+﻿using Microsoft.CodeAnalysis.VisualBasic;
+
+public class SampleVbTest
 {
     [Fact]
     public Task Driver()
@@ -28,10 +30,10 @@
 
     static GeneratorDriver BuildDriver()
     {
-        var compilation = CSharpCompilation.Create("name");
-        var generator = new HelloWorldGenerator();
+        var compilation = VisualBasicCompilation.Create("name");
+        var generator = new HelloWorldVbGenerator();
 
-        var driver = CSharpGeneratorDriver.Create(generator);
-        return driver.RunGenerators(compilation);
+        var vbGeneratorDriver = VisualBasicGeneratorDriver.Create([generator]);
+        return vbGeneratorDriver.RunGenerators(compilation);
     }
 }

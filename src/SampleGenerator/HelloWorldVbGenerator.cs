@@ -2,31 +2,28 @@
 using Microsoft.CodeAnalysis.Text;
 
 [Generator]
-public class HelloWorldGenerator :
+public class HelloWorldVbGenerator :
     ISourceGenerator
 {
     public void Execute(GeneratorExecutionContext context)
     {
         var source1 = """
-                      using System;
-                      public static class Helper
-                      {
-                          public static void Method()
-                          {
-                          }
-                      }
+                      Imports System
+                      Public Module Helper
+                          Public Sub Method()
+                          End Sub
+                      End Module
                       """;
         context.AddSource("helper", SourceText.From(source1, Encoding.UTF8));
 
         var source2 = """
-                      using System;
-                      public static class HelloWorld
-                      {
-                          public static void SayHello()
-                          {
-                              Console.WriteLine("Hello from generated code!");
-                          }
-                      }
+                      Imports System
+
+                      Public Module HelloWorld
+                          Public Sub SayHello()
+                              Console.WriteLine("Hello from generated code!")
+                          End Sub
+                      End Module
                       """;
         var sourceText = SourceText.From(source2, Encoding.UTF8);
         context.AddSource("helloWorld", sourceText);
