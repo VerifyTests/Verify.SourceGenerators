@@ -14,7 +14,19 @@
     <ProjectReference Include="..\Verify.SourceGenerators\Verify.SourceGenerators.csproj" />
     <PackageReference Include="ProjectDefaults" PrivateAssets="all" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.CodeAnalysis.VisualBasic" PrivateAssets="all" />
     <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" PrivateAssets="all" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="SampleVbTest.Driver#helper.verified.cs">
+      <ParentFile>SampleTest</ParentFile>
+    </None>
+    <None Update="SampleVbTest.RunResults#helloWorld.verified.cs">
+      <ParentFile>SampleTest</ParentFile>
+    </None>
+    <None Update="SampleVbTest.RunResults#helper.verified.cs">
+      <ParentFile>SampleTest</ParentFile>
+    </None>
   </ItemGroup>
   <Import Project="$(ProjectDir)..\Verify.SourceGenerators\build\Verify.SourceGenerators.targets" />
 </Project>
