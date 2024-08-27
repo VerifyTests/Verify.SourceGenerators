@@ -119,8 +119,8 @@ public class SampleTest
     {
         var driver = GeneratorDriver();
 
-        var runResults = driver.GetRunResult();
-        return Verify(runResults);
+        var results = driver.GetRunResult();
+        return Verify(results);
     }
 
     [Fact]
@@ -128,8 +128,8 @@ public class SampleTest
     {
         var driver = GeneratorDriver();
 
-        var runResult = driver.GetRunResult().Results.Single();
-        return Verify(runResult);
+        var result = driver.GetRunResult().Results.Single();
+        return Verify(result);
     }
 
     static GeneratorDriver GeneratorDriver()
