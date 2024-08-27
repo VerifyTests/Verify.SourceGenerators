@@ -4,5 +4,5 @@ class LocationConverter :
     WriteOnlyJsonConverter<Location>
 {
     public override void Write(VerifyJsonWriter writer, Location value) =>
-        writer.WriteValue(value.GetMappedLineSpan());
+        writer.Serialize(value.GetMappedLineSpan());
 }
