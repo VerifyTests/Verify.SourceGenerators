@@ -17,6 +17,10 @@
     public Task LocalizableStringConverter() =>
         Verify(new LocalizableStringImp());
 
+    [Fact]
+    public Task FileLinePositionSpanConverter() =>
+        Verify(new FileLinePositionSpan("the path", new(1,2), new(2,4)));
+
     class LocalizableStringImp :
         LocalizableString
     {
