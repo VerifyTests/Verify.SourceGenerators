@@ -10,7 +10,7 @@
     <PackageVersion Include="Microsoft.CodeAnalysis.VisualBasic" Version="4.9.2"/>
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.11.0" />
     <PackageVersion Include="Polyfill" Version="6.5.0" />
-    <PackageVersion Include="ProjectDefaults" Version="1.0.134" />
+    <PackageVersion Include="ProjectDefaults" Version="1.0.135" />
     <PackageVersion Include="Verify" Version="26.3.1" />
     <PackageVersion Include="Verify.DiffPlex" Version="3.1.0" />
     <PackageVersion Include="Verify.XunitV3" Version="26.2.0-beta.1" />
