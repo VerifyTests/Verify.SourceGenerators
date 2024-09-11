@@ -12,6 +12,15 @@
     [Fact]
     public Task SourceTextConverter() =>
         Verify(SourceText.From("theSource", Encoding.UTF8));
+    [Fact]
+    public Task PathTest()
+    {
+        var path = Path.Combine(AttributeReader.GetProjectDirectory(), "a/b").Replace('/', '\\');
+        return Verify(new
+        {
+           path
+        });
+    }
 
     [Fact]
     public Task LocalizableStringConverter() =>
