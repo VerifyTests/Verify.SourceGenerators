@@ -166,7 +166,7 @@ An info file containing all metadata about the current state. eg any Diagnostics
       Title: the title,
       Severity: Info,
       WarningLevel: 1,
-      Location: theFile: (1,2)-(3,4),
+      Location: dir\theFile.cs: (1,2)-(3,4),
       MessageFormat: the message from {0},
       Message: the message from hello world generator,
       Category: the category
