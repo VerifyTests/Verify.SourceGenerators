@@ -7,9 +7,9 @@
         writer.WriteMember(value, value.Id, "Id");
         var descriptor = value.Descriptor;
         writer.WriteMember(value, descriptor.Title, "Title");
-        writer.WriteMember(value, value.Severity.ToString(), "Severity");
+        writer.WriteMember(value, value.Severity, "Severity");
         writer.WriteMember(value, value.WarningLevel, "WarningLevel");
-        writer.WriteMember(value, value.Location.GetMappedLineSpan().ToString(), "Location");
+        writer.WriteMember(value, value.Location.GetMappedLineSpan(), "Location");
         var description = descriptor.Description.ToString(CultureInfo.InvariantCulture);
         if (!string.IsNullOrWhiteSpace(description))
         {
