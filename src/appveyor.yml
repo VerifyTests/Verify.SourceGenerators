@@ -21,8 +21,9 @@ build_script:
         sudo chmod u+x dotnet-install.sh
         sudo ./dotnet-install.sh --jsonfile src/global.json --architecture x64 --install-dir '/usr/share/dotnet'
       }
-- dotnet build src --configuration Release
-- dotnet test src --configuration Release --no-build --no-restore --filter Category!=Integration
+build_script:
+  - dotnet build src --configuration Release
+  - dotnet test src --configuration Release --no-build --no-restore --filter Category!=Integration
 test: off
 on_failure:
   - ps: Get-ChildItem *.received.* -recurse | % { Push-AppveyorArtifact $_.FullName -FileName $_.Name }
