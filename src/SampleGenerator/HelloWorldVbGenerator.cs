@@ -37,7 +37,7 @@ public class HelloWorldVbGenerator :
             isEnabledByDefault: true);
 
         var location = Location.Create(
-            "theFile",
+            Path.Combine("dir", "theFile.vb"),
             new(1, 2),
             new(
                 new(1, 2),
