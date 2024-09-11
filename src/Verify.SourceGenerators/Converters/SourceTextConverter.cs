@@ -1,6 +1,4 @@
-﻿using Microsoft.CodeAnalysis.Text;
-
-class SourceTextConverter :
+﻿class SourceTextConverter :
     WriteOnlyJsonConverter<SourceText>
 {
     public override void Write(VerifyJsonWriter writer, SourceText value) =>

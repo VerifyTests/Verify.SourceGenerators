@@ -1,6 +1,4 @@
-﻿using Microsoft.CodeAnalysis;
-
-namespace VerifyTests;
+﻿namespace VerifyTests;
 
 public static class VerifySourceGenerators
 {

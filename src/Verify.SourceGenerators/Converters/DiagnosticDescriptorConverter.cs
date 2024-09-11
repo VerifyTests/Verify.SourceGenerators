@@ -1,7 +1,4 @@
-﻿using System.Globalization;
-using Microsoft.CodeAnalysis;
-
-class DiagnosticDescriptorConverter :
+﻿class DiagnosticDescriptorConverter :
     WriteOnlyJsonConverter<DiagnosticDescriptor>
 {
     public override void Write(VerifyJsonWriter writer, DiagnosticDescriptor value)

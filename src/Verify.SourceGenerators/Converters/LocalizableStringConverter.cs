@@ -1,7 +1,4 @@
-﻿using System.Globalization;
-using Microsoft.CodeAnalysis;
-
-class LocalizableStringConverter :
+﻿class LocalizableStringConverter :
     WriteOnlyJsonConverter<LocalizableString>
 {
     public override void Write(VerifyJsonWriter writer, LocalizableString value) =>

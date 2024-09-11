@@ -1,6 +1,4 @@
-﻿using Microsoft.CodeAnalysis;
-
-class GeneratedSourceResultConverter :
+﻿class GeneratedSourceResultConverter :
     WriteOnlyJsonConverter<GeneratedSourceResult>
 {
     public override void Write(VerifyJsonWriter writer, GeneratedSourceResult value)

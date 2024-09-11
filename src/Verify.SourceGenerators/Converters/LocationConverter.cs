@@ -1,6 +1,4 @@
-﻿using Microsoft.CodeAnalysis;
-
-class LocationConverter :
+﻿class LocationConverter :
     WriteOnlyJsonConverter<Location>
 {
     public override void Write(VerifyJsonWriter writer, Location value) =>
