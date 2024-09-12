@@ -1,0 +1,36 @@
+﻿{
+  Generator: {},
+  GeneratedSources: [
+    {
+      HintName: helper.vb,
+      Source:
+Imports System
+Public Module Helper
+    Public Sub Method()
+    End Sub
+End Module
+    },
+    {
+      HintName: helloWorld.vb,
+      Source:
+Imports System
+
+Public Module HelloWorld
+    Public Sub SayHello()
+        Console.WriteLine("Hello from generated code!")
+    End Sub
+End Module
+    }
+  ],
+  Diagnostics: [
+    {
+      Id: theId,
+      Title: the title,
+      Severity: Info,
+      WarningLevel: 1,
+      MessageFormat: the message from {0},
+      Message: the message from hello world generator,
+      Category: the category
+    }
+  ]
+}

@@ -36,12 +36,7 @@ public class HelloWorldVbGenerator :
             DiagnosticSeverity.Info,
             isEnabledByDefault: true);
 
-        var location = Location.Create(
-            Path.Combine("dir", "theFile.vb"),
-            new(1, 2),
-            new(
-                new(1, 2),
-                new(3, 4)));
+        var location = GetLocation();
         var diagnostic = Diagnostic.Create(descriptor, location, "hello world generator");
         context.ReportDiagnostic(diagnostic);
     }
@@ -49,4 +44,12 @@ public class HelloWorldVbGenerator :
     public void Initialize(GeneratorInitializationContext context)
     {
     }
+
+    protected virtual Location? GetLocation() =>
+        Location.Create(
+            Path.Combine("dir", "theFile.vb"),
+            new(1, 2),
+            new(
+                new(1, 2),
+                new(3, 4)));
 }
