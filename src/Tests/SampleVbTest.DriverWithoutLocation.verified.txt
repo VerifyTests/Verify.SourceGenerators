@@ -1,0 +1,13 @@
+﻿{
+  Diagnostics: [
+    {
+      Id: theId,
+      Title: the title,
+      Severity: Info,
+      WarningLevel: 1,
+      MessageFormat: the message from {0},
+      Message: the message from hello world generator,
+      Category: the category
+    }
+  ]
+}

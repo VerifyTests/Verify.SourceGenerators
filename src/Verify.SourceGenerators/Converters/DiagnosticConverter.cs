@@ -9,7 +9,10 @@
         writer.WriteMember(value, descriptor.Title, "Title");
         writer.WriteMember(value, value.Severity, "Severity");
         writer.WriteMember(value, value.WarningLevel, "WarningLevel");
-        writer.WriteMember(value, value.Location, "Location");
+        if (value.Location != Location.None)
+        {
+            writer.WriteMember(value, value.Location, "Location");
+        }
         var description = descriptor.Description.ToString(CultureInfo.InvariantCulture);
         if (!string.IsNullOrWhiteSpace(description))
         {
