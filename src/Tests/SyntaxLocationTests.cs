@@ -11,7 +11,7 @@
             """;
 
         var source = SourceText.From(sourceText);
-        var syntaxTree = SyntaxFactory.ParseSyntaxTree(source);
+        var syntaxTree = SyntaxFactory.ParseSyntaxTree(source, path: "theFile.cs");
 
         var methodDeclarationSyntax = syntaxTree
             .GetRoot()
