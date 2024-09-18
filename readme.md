@@ -162,19 +162,23 @@ An info file containing all metadata about the current state. eg any Diagnostics
 {
   Diagnostics: [
     {
-      Id: theId,
-      Title: the title,
+      Location: dir\theFile.cs: (1,2)-(3,4),
+      Message: the message from hello world generator,
       Severity: Info,
       WarningLevel: 1,
-      Location: dir\theFile.cs: (1,2)-(3,4),
-      MessageFormat: the message from {0},
-      Message: the message from hello world generator,
-      Category: the category
+      Descriptor: {
+        Id: theId,
+        Title: the title,
+        MessageFormat: the message from {0},
+        Category: the category,
+        DefaultSeverity: Info,
+        IsEnabledByDefault: true
+      }
     }
   ]
 }
 ```
-<sup><a href='/src/Tests/SampleTest.Driver.verified.txt#L1-L14' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleTest.Driver.verified.txt' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/SampleTest.Driver.verified.txt#L1-L18' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleTest.Driver.verified.txt' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 

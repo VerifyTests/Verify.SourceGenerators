@@ -1,14 +1,18 @@
 ﻿{
   Diagnostics: [
     {
-      Id: theId,
-      Title: the title,
+      Location: dir\theFile.cs: (1,2)-(3,4),
+      Message: the message from hello world generator,
       Severity: Info,
       WarningLevel: 1,
-      Location: dir\theFile.cs: (1,2)-(3,4),
-      MessageFormat: the message from {0},
-      Message: the message from hello world generator,
-      Category: the category
+      Descriptor: {
+        Id: theId,
+        Title: the title,
+        MessageFormat: the message from {0},
+        Category: the category,
+        DefaultSeverity: Info,
+        IsEnabledByDefault: true
+      }
     }
   ]
 }
