@@ -1,6 +1,8 @@
 ﻿class LocationConverter :
     WriteOnlyJsonConverter<Location>
 {
+    const int contextLines = 1;
+
     public override void Write(VerifyJsonWriter writer, Location value)
     {
         var lineSpan = value.GetMappedLineSpan();
@@ -21,8 +23,8 @@
         var comment = new StringBuilder();
         comment.AppendLine();
         var lines = source.GetText().Lines;
-        var startLine = Math.Max(lineSpan.StartLinePosition.Line - 1, 0);
-        var endLine = Math.Min(lineSpan.EndLinePosition.Line + 1, lines.Count - 1);
+        var startLine = Math.Max(lineSpan.StartLinePosition.Line - contextLines, 0);
+        var endLine = Math.Min(lineSpan.EndLinePosition.Line + contextLines, lines.Count - 1);
         for (var index = startLine; index <= endLine; index++)
         {
             var line = lines[index];
