@@ -1,4 +1,6 @@
-﻿namespace VerifyTests;
+﻿using System.Runtime.ExceptionServices;
+
+namespace VerifyTests;
 
 public static class VerifySourceGenerators
 {
@@ -52,7 +54,7 @@ public static class VerifySourceGenerators
 
         if (exceptions.Count == 1)
         {
-            throw exceptions.First();
+            ExceptionDispatchInfo.Capture(exceptions.First()).Throw();
         }
 
         if (exceptions.Count > 1)
