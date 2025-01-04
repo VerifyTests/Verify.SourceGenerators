@@ -6,8 +6,8 @@
     <PackageReference Include="Polyfill" PrivateAssets="all" />
     <PackageReference Include="Verify" />
     <PackageReference Include="ProjectDefaults" PrivateAssets="all" />
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" PrivateAssets="all" />
-    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" />
     <Content Include="build\Verify.SourceGenerators.targets" PackagePath="build\Verify.SourceGenerators.targets" />
   </ItemGroup>
 </Project>

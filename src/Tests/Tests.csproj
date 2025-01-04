@@ -13,9 +13,9 @@
     <ProjectReference Include="..\SampleGenerator\SampleGenerator.csproj" />
     <ProjectReference Include="..\Verify.SourceGenerators\Verify.SourceGenerators.csproj" />
     <PackageReference Include="ProjectDefaults" PrivateAssets="all" />
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" PrivateAssets="all" />
-    <PackageReference Include="Microsoft.CodeAnalysis.VisualBasic" PrivateAssets="all" />
-    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" />
+    <PackageReference Include="Microsoft.CodeAnalysis.VisualBasic" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" />
   </ItemGroup>
   <Import Project="$(ProjectDir)..\Verify.SourceGenerators\build\Verify.SourceGenerators.targets" />
 </Project>
