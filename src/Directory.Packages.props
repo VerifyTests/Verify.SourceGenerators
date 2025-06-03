@@ -8,7 +8,7 @@
     <PackageVersion Include="Microsoft.CodeAnalysis.Analyzers" Version="3.11.0" />
     <PackageVersion Include="Microsoft.CodeAnalysis.CSharp" Version="4.9.2" />
     <PackageVersion Include="Microsoft.CodeAnalysis.VisualBasic" Version="4.9.2" />
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.14.0" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
     <PackageVersion Include="Polyfill" Version="8.0.0-beta.2" />
     <PackageVersion Include="ProjectDefaults" Version="1.0.155" />
     <PackageVersion Include="Verify" Version="30.3.0" />
