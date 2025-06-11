@@ -9,11 +9,9 @@ Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of
 **See [Milestones](../../milestones?state=closed) for release notes.**
 
 
-## NuGet package
+## NuGet
 
-https://nuget.org/packages/Verify.SourceGenerators/
-
-Install one of the Verify [testing framework adapters](https://github.com/verifytests/verify#nuget-packages) NuGet packages.
+ * https://nuget.org/packages/Verify.SourceGenerators
 
 
 ## Initialize
