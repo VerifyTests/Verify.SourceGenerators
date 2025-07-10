@@ -1,7 +1,4 @@
-﻿using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.Text;
-
-[Generator]
+﻿[Generator]
 public class HelloWorldGenerator :
     ISourceGenerator
 {

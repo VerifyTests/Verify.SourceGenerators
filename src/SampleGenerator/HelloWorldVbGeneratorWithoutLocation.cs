@@ -1,6 +1,4 @@
-﻿using Microsoft.CodeAnalysis;
-
-[Generator]
+﻿[Generator]
 public class HelloWorldVbGeneratorWithoutLocation :
     HelloWorldVbGenerator
 {
