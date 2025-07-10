@@ -44,9 +44,6 @@ Given a Source Generator:
 <!-- snippet: HelloWorldGenerator.cs -->
 <a id='snippet-HelloWorldGenerator.cs'></a>
 ```cs
-using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.Text;
-
 [Generator]
 public class HelloWorldGenerator :
     ISourceGenerator
@@ -100,7 +97,7 @@ public class HelloWorldGenerator :
     }
 }
 ```
-<sup><a href='/src/SampleGenerator/HelloWorldGenerator.cs#L1-L55' title='Snippet source file'>snippet source</a> | <a href='#snippet-HelloWorldGenerator.cs' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/SampleGenerator/HelloWorldGenerator.cs#L1-L52' title='Snippet source file'>snippet source</a> | <a href='#snippet-HelloWorldGenerator.cs' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
