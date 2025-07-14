@@ -5,9 +5,9 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageVersion Include="MarkdownSnippets.MsBuild" Version="28.0.0-beta.2" />
-    <PackageVersion Include="Microsoft.CodeAnalysis.Analyzers" Version="4.14.0" />
-    <PackageVersion Include="Microsoft.CodeAnalysis.CSharp" Version="4.14.0" />
-    <PackageVersion Include="Microsoft.CodeAnalysis.VisualBasic" Version="4.14.0" />
+    <PackageVersion Include="Microsoft.CodeAnalysis.Analyzers" Version="4.9.0.0" />
+    <PackageVersion Include="Microsoft.CodeAnalysis.CSharp" Version="4.9.0.0" />
+    <PackageVersion Include="Microsoft.CodeAnalysis.VisualBasic" Version="4.9.0.0" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
     <PackageVersion Include="Polyfill" Version="8.7.3" />
     <PackageVersion Include="ProjectDefaults" Version="1.0.156" />
