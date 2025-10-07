@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="../.gitignore" />
+    <File Path="../docs/intro.include.md" />
+    <File Path="../docs/zzz.include.md" />
+    <File Path="../readme.md" />
+    <File Path=".editorconfig" />
+    <File Path=".gitattributes" />
+    <File Path="appveyor.yml" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="global.json" />
+    <File Path="mdsnippets.json" />
+    <File Path="nuget.md" />
+  </Folder>
+  <Project Path="SampleGenerator/SampleGenerator.csproj" />
+  <Project Path="Tests/Tests.csproj" />
+  <Project Path="Verify.SourceGenerators/Verify.SourceGenerators.csproj" />
+</Solution>
