@@ -4,7 +4,7 @@
     <File Path="../docs/intro.include.md" />
     <File Path="../docs/zzz.include.md" />
     <File Path="../readme.md" />
-    <File Path=".editorconfig" />
+    <File Path="../.editorconfig" />
     <File Path="../.gitattributes" />
     <File Path="appveyor.yml" />
     <File Path="Directory.Build.props" />
