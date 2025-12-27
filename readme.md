@@ -1,7 +1,7 @@
 # <img src="/src/icon.png" height="30px"> Verify.SourceGenerators
 
 [![Discussions](https://img.shields.io/badge/Verify-Discussions-yellow?svg=true&label=)](https://github.com/orgs/VerifyTests/discussions)
-[![Build status](https://ci.appveyor.com/api/projects/status/2ip7do6jk0gevt0v?svg=true)](https://ci.appveyor.com/project/SimonCropp/Verify-SourceGenerators)
+[![Build status](https://img.shields.io/appveyor/build/SimonCropp/Verify-SourceGenerators)](https://ci.appveyor.com/project/SimonCropp/Verify-SourceGenerators)
 [![NuGet Status](https://img.shields.io/nuget/v/Verify.SourceGenerators.svg)](https://www.nuget.org/packages/Verify.SourceGenerators/)
 
 Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of C# Source Generators.<!-- singleLineInclude: intro. path: /docs/intro.include.md -->
