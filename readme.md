@@ -204,7 +204,7 @@ public static class HelloWorld
     }
 }
 ```
-<sup><a href='/src/Tests/SampleTest.Driver#helloWorld.verified.cs#L1-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleTest.Driver#helloWorld.verified.cs' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/SampleTest.Driver%23helloWorld.verified.cs#L1-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleTest.Driver#helloWorld.verified.cs' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
