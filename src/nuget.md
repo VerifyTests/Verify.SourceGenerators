@@ -16,4 +16,4 @@
 
 ### Developed using JetBrains IDEs
 
-[![JetBrains logo.](https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains.svg)](https://jb.gg/OpenSourceSupport)<!-- endInclude -->
+[![JetBrains logo.](https://raw.githubusercontent.com/VerifyTests/Verify.SourceGenerators/main/docs/jetbrains.png)](https://jb.gg/OpenSourceSupport)<!-- endInclude -->
