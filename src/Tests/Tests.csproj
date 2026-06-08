@@ -14,7 +14,6 @@
     <PackageReference Include="SimpleInfoName" />
     <PackageReference Include="Verify" />
     <PackageReference Include="Verify.DiffPlex" />
-    <PackageReference Include="xunit.runner.visualstudio" PrivateAssets="all" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
     <ProjectReference Include="..\SampleGenerator\SampleGenerator.csproj" />
     <ProjectReference Include="..\Verify.SourceGenerators\Verify.SourceGenerators.csproj" />
