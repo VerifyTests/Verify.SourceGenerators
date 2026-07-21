@@ -23,7 +23,16 @@ before_build:
       }
 build_script:
   - dotnet build src --configuration Release
-  - dotnet test src --configuration Release --no-build --no-restore
+  - pwsh: |
+      dotnet test src --configuration Release --no-build --no-restore --report-xunit-trx
+      $testExit = $LASTEXITCODE
+      $url = "https://ci.appveyor.com/api/testresults/mstest/$($env:APPVEYOR_JOB_ID)"
+      Get-ChildItem -Recurse -Filter *.trx | ForEach-Object {
+        Write-Host "Uploading test results: $($_.FullName)"
+        try { (New-Object System.Net.WebClient).UploadFile($url, $_.FullName) }
+        catch { Write-Host "Failed to upload test results: $_" }
+      }
+      if ($testExit -ne 0) { exit $testExit }
 test: off
 on_failure:
   - ps: |
