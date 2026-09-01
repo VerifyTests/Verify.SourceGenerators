@@ -7,12 +7,12 @@
   <ItemGroup>
     <PackageReference Include="MarkdownSnippets.MsBuild" PrivateAssets="all" />
     <PackageReference Include="xunit.v3" />
-    <PackageReference Include="Verify.XunitV3" />
+    <PackageReference Include="Verify.XunitV3" VersionOverride="33.0.0-beta.3" />
     <PackageReference Include="Argon" />
     <PackageReference Include="DiffEngine" />
     <PackageReference Include="EmptyFiles" />
     <PackageReference Include="SimpleInfoName" />
-    <PackageReference Include="Verify" />
+    <PackageReference Include="Verify" VersionOverride="33.0.0-beta.3" />
     <PackageReference Include="Verify.DiffPlex" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
     <ProjectReference Include="..\SampleGenerator\SampleGenerator.csproj" />
