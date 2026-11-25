@@ -12,8 +12,8 @@
     <PackageVersion Include="Polyfill" Version="12.0.0" />
     <PackageVersion Include="ProjectDefaults" Version="1.0.191" />
     <PackageVersion Include="Sbom" Version="1.0.0" />
-    <PackageVersion Include="Verify" Version="33.7.2" />
-    <PackageVersion Include="Verify.XunitV3" Version="33.7.2" />
+    <PackageVersion Include="Verify" Version="33.7.3" />
+    <PackageVersion Include="Verify.XunitV3" Version="33.7.3" />
     <PackageVersion Include="xunit.v3" Version="4.0.3" />
     <PackageVersion Include="Argon" Version="0.38.2" />
     <PackageVersion Include="DiffEngine" Version="21.2.1" />
